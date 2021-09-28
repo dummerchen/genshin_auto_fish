@@ -1,7 +1,11 @@
-#!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 # Copyright (c) Megvii, Inc. and its affiliates.
 
+import os
+import sys
+rootPath = os.path.abspath('.')
+sys.path.append(rootPath)
+print(sys.path)
 import argparse
 import random
 import warnings
@@ -30,21 +34,21 @@ def make_parser():
         type=str,
         help="url used to set up distributed training",
     )
-    parser.add_argument("-b", "--batch-size", type=int, default=64, help="batch size")
+    parser.add_argument("-b", "--batch-size", type=int, default=8, help="batch size")
     parser.add_argument(
-        "-d", "--devices", default=None, type=int, help="device for training"
+        "-d", "--devices", default='1', type=int, help="device for training"
     )
     parser.add_argument(
         "-f",
         "--exp_file",
-        default=None,
+        default='../yolox/exp/yolox_tiny_fish.py',
         type=str,
         help="plz input your expriment description file",
     )
     parser.add_argument(
         "--resume", default=False, action="store_true", help="resume training"
     )
-    parser.add_argument("-c", "--ckpt", default=None, type=str, help="checkpoint file")
+    parser.add_argument("-c", "--ckpt", default='../weights/yolox_tiny.pth', type=str, help="checkpoint file")
     parser.add_argument(
         "-e",
         "--start_epoch",
@@ -111,8 +115,10 @@ def main(exp, args):
 
 #python tools/train.py -f exps/yolox_tiny.py -d 1 -b 8 --fp16 -o -c weights/yolox_tiny.pth
 if __name__ == "__main__":
+    
     args = make_parser().parse_args()
     exp = get_exp(args.exp_file, args.name)
+
     exp.merge(args.opts)
 
     if not args.experiment_name:

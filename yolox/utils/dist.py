@@ -107,7 +107,6 @@ def get_local_rank() -> int:
     assert _LOCAL_PROCESS_GROUP is not None
     return dist.get_rank(group=_LOCAL_PROCESS_GROUP)
 
-
 def get_local_size() -> int:
     """
     Returns:

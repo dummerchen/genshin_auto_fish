@@ -1,0 +1,7 @@
+*.log
+weights/
+imgs/
+temp
+*.pth
+*.pt
+.idea/

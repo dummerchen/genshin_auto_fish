@@ -1,0 +1,2956 @@
+2021-09-24 18:06:02.023 | INFO     | yolox.core.trainer:before_train:126 - args: Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=1, dist_backend='nccl', dist_url=None, exp_file='../yolox/exp/yolox_tiny_fish.py', experiment_name='yolox_tiny_fish', fp16=False, machine_rank=0, name=None, num_machines=1, occupy=False, opts=[], resume=False, start_epoch=None)
+2021-09-24 18:06:02.046 | INFO     | yolox.core.trainer:before_train:127 - exp value:
+╒══════════════════╤═══════════════════════╕
+│ keys             │ values                │
+╞══════════════════╪═══════════════════════╡
+│ seed             │ None                  │
+├──────────────────┼───────────────────────┤
+│ output_dir       │ './YOLOX_outputs'     │
+├──────────────────┼───────────────────────┤
+│ print_interval   │ 10                    │
+├──────────────────┼───────────────────────┤
+│ eval_interval    │ 10                    │
+├──────────────────┼───────────────────────┤
+│ num_classes      │ 6                     │
+├──────────────────┼───────────────────────┤
+│ depth            │ 0.33                  │
+├──────────────────┼───────────────────────┤
+│ width            │ 0.375                 │
+├──────────────────┼───────────────────────┤
+│ data_num_workers │ 4                     │
+├──────────────────┼───────────────────────┤
+│ input_size       │ (640, 640)            │
+├──────────────────┼───────────────────────┤
+│ multiscale_range │ 5                     │
+├──────────────────┼───────────────────────┤
+│ data_dir         │ '../imgs/'            │
+├──────────────────┼───────────────────────┤
+│ data_name        │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ val_name         │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ train_ann        │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ val_ann          │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ mosaic_prob      │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ mixup_prob       │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ hsv_prob         │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ flip_prob        │ 0.5                   │
+├──────────────────┼───────────────────────┤
+│ degrees          │ 10.0                  │
+├──────────────────┼───────────────────────┤
+│ translate        │ 0.1                   │
+├──────────────────┼───────────────────────┤
+│ mosaic_scale     │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ mixup_scale      │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ shear            │ 2.0                   │
+├──────────────────┼───────────────────────┤
+│ perspective      │ 0.0                   │
+├──────────────────┼───────────────────────┤
+│ enable_mixup     │ False                 │
+├──────────────────┼───────────────────────┤
+│ warmup_epochs    │ 5                     │
+├──────────────────┼───────────────────────┤
+│ max_epoch        │ 35                    │
+├──────────────────┼───────────────────────┤
+│ warmup_lr        │ 0                     │
+├──────────────────┼───────────────────────┤
+│ basic_lr_per_img │ 0.00025               │
+├──────────────────┼───────────────────────┤
+│ scheduler        │ 'yoloxwarmcos'        │
+├──────────────────┼───────────────────────┤
+│ no_aug_epochs    │ 15                    │
+├──────────────────┼───────────────────────┤
+│ min_lr_ratio     │ 0.05                  │
+├──────────────────┼───────────────────────┤
+│ ema              │ True                  │
+├──────────────────┼───────────────────────┤
+│ weight_decay     │ 0.0005                │
+├──────────────────┼───────────────────────┤
+│ momentum         │ 0.9                   │
+├──────────────────┼───────────────────────┤
+│ exp_name         │ 'yolox_tiny_fish'     │
+├──────────────────┼───────────────────────┤
+│ test_size        │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ test_conf        │ 0.01                  │
+├──────────────────┼───────────────────────┤
+│ nmsthre          │ 0.65                  │
+├──────────────────┼───────────────────────┤
+│ input_scale      │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ random_size      │ (10, 20)              │
+╘══════════════════╧═══════════════════════╛
+2021-09-24 18:06:02.048 | ERROR    | yolox.core.launch:launch:98 - An error has been caught in function 'launch', process 'MainProcess' (17880), thread 'MainThread' (21164):
+Traceback (most recent call last):
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2141, in <module>
+    main()
+    └ <function main at 0x00000287D20EA558>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2132, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+              │        │   │                          └ False
+              │        │   └ {'port': 4251, 'vm_type': None, 'client': '127.0.0.1', 'server': False, 'DEBUG_RECORD_SOCKET_READS': False, 'multiproc': True...
+              │        └ <function PyDB.run at 0x00000287D20E7558>
+              └ <__main__.PyDB object at 0x00000287D1494DC8>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1441, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+           │    │     │          │               │            │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+           │    │     │          │               └ None
+           │    │     │          └ ''
+           │    │     └ False
+           │    └ <function PyDB._exec at 0x00000287D20E75E8>
+           └ <__main__.PyDB object at 0x00000287D1494DC8>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1448, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+    │             │        │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+    │             └ <function execfile at 0x00000287D03EE8B8>
+    └ <module '_pydev_bundle.pydev_imports' from 'E:\\PYCHARM\\PyCharm 2020.2.3\\plugins\\python\\helpers\\pydev\\_pydev_bundle\\py...
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+                 │              │              │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              │              └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+                 └ '#!/usr/bin/env python3\n# -*- coding:utf-8 -*-\n# Copyright (c) Megvii, Inc. and its affiliates.\n\nimport argparse\nimport ...
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 133, in <module>
+    args=(exp, args),
+          │    └ Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=1, dist_backend='nccl', dist_url=None, exp_fil...
+          └ ╒══════════════════╤═══════════════════════╕
+            │ keys             │ values                │
+            ╞══════════════════╪═══════════════...
+
+> File "E:\clonegit项目\genshin_auto_fish\yolox\core\launch.py", line 98, in launch
+    main_func(*args)
+    │          └ (╒══════════════════╤═══════════════════════╕
+    │            │ keys             │ values                │
+    │            ╞══════════════════╪══════════════...
+    └ <function main at 0x00000287D22084C8>
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 110, in main
+    trainer.train()
+    │       └ <function Trainer.train at 0x00000287D54C73A8>
+    └ <yolox.core.trainer.Trainer object at 0x00000287D7FF8D08>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 70, in train
+    self.before_train()
+    │    └ <function Trainer.before_train at 0x00000287D7F7C168>
+    └ <yolox.core.trainer.Trainer object at 0x00000287D7FF8D08>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 130, in before_train
+    torch.cuda.set_device(self.local_rank)
+    │     │    │          │    └ 0
+    │     │    │          └ <yolox.core.trainer.Trainer object at 0x00000287D7FF8D08>
+    │     │    └ <function set_device at 0x00000287D46DEA68>
+    │     └ <module 'torch.cuda' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\cuda\\__init__.py'>
+    └ <module 'torch' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\__init__.py'>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\__init__.py", line 263, in set_device
+    torch._C._cuda_setDevice(device)
+    │     │                  └ 0
+    │     └ <module 'torch._C' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\_C.cp37-win_amd64.pyd'>
+    └ <module 'torch' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\__init__.py'>
+
+AttributeError: module 'torch._C' has no attribute '_cuda_setDevice'
+2021-09-24 18:08:25.212 | INFO     | yolox.core.trainer:before_train:126 - args: Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=1, dist_backend='nccl', dist_url=None, exp_file='../yolox/exp/yolox_tiny_fish.py', experiment_name='yolox_tiny_fish', fp16=False, machine_rank=0, name=None, num_machines=1, occupy=False, opts=[], resume=False, start_epoch=None)
+2021-09-24 18:08:25.231 | INFO     | yolox.core.trainer:before_train:127 - exp value:
+╒══════════════════╤═══════════════════════╕
+│ keys             │ values                │
+╞══════════════════╪═══════════════════════╡
+│ seed             │ None                  │
+├──────────────────┼───────────────────────┤
+│ output_dir       │ './YOLOX_outputs'     │
+├──────────────────┼───────────────────────┤
+│ print_interval   │ 10                    │
+├──────────────────┼───────────────────────┤
+│ eval_interval    │ 10                    │
+├──────────────────┼───────────────────────┤
+│ num_classes      │ 6                     │
+├──────────────────┼───────────────────────┤
+│ depth            │ 0.33                  │
+├──────────────────┼───────────────────────┤
+│ width            │ 0.375                 │
+├──────────────────┼───────────────────────┤
+│ data_num_workers │ 4                     │
+├──────────────────┼───────────────────────┤
+│ input_size       │ (640, 640)            │
+├──────────────────┼───────────────────────┤
+│ multiscale_range │ 5                     │
+├──────────────────┼───────────────────────┤
+│ data_dir         │ '../imgs/'            │
+├──────────────────┼───────────────────────┤
+│ data_name        │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ val_name         │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ train_ann        │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ val_ann          │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ mosaic_prob      │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ mixup_prob       │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ hsv_prob         │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ flip_prob        │ 0.5                   │
+├──────────────────┼───────────────────────┤
+│ degrees          │ 10.0                  │
+├──────────────────┼───────────────────────┤
+│ translate        │ 0.1                   │
+├──────────────────┼───────────────────────┤
+│ mosaic_scale     │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ mixup_scale      │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ shear            │ 2.0                   │
+├──────────────────┼───────────────────────┤
+│ perspective      │ 0.0                   │
+├──────────────────┼───────────────────────┤
+│ enable_mixup     │ False                 │
+├──────────────────┼───────────────────────┤
+│ warmup_epochs    │ 5                     │
+├──────────────────┼───────────────────────┤
+│ max_epoch        │ 35                    │
+├──────────────────┼───────────────────────┤
+│ warmup_lr        │ 0                     │
+├──────────────────┼───────────────────────┤
+│ basic_lr_per_img │ 0.00025               │
+├──────────────────┼───────────────────────┤
+│ scheduler        │ 'yoloxwarmcos'        │
+├──────────────────┼───────────────────────┤
+│ no_aug_epochs    │ 15                    │
+├──────────────────┼───────────────────────┤
+│ min_lr_ratio     │ 0.05                  │
+├──────────────────┼───────────────────────┤
+│ ema              │ True                  │
+├──────────────────┼───────────────────────┤
+│ weight_decay     │ 0.0005                │
+├──────────────────┼───────────────────────┤
+│ momentum         │ 0.9                   │
+├──────────────────┼───────────────────────┤
+│ exp_name         │ 'yolox_tiny_fish'     │
+├──────────────────┼───────────────────────┤
+│ test_size        │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ test_conf        │ 0.01                  │
+├──────────────────┼───────────────────────┤
+│ nmsthre          │ 0.65                  │
+├──────────────────┼───────────────────────┤
+│ input_scale      │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ random_size      │ (10, 20)              │
+╘══════════════════╧═══════════════════════╛
+2021-09-24 18:08:45.665 | ERROR    | yolox.core.launch:launch:98 - An error has been caught in function 'launch', process 'MainProcess' (36976), thread 'MainThread' (20340):
+Traceback (most recent call last):
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2141, in <module>
+    main()
+    └ <function main at 0x000002517F3BA558>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2132, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+              │        │   │                          └ False
+              │        │   └ {'port': 14466, 'vm_type': None, 'client': '127.0.0.1', 'server': False, 'DEBUG_RECORD_SOCKET_READS': False, 'multiproc': Tru...
+              │        └ <function PyDB.run at 0x000002517F3B7558>
+              └ <__main__.PyDB object at 0x000002517A7B5A48>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1441, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+           │    │     │          │               │            │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+           │    │     │          │               └ None
+           │    │     │          └ ''
+           │    │     └ False
+           │    └ <function PyDB._exec at 0x000002517F3B75E8>
+           └ <__main__.PyDB object at 0x000002517A7B5A48>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1448, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+    │             │        │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+    │             └ <function execfile at 0x000002517D6BE8B8>
+    └ <module '_pydev_bundle.pydev_imports' from 'E:\\PYCHARM\\PyCharm 2020.2.3\\plugins\\python\\helpers\\pydev\\_pydev_bundle\\py...
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+                 │              │              │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              │              └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+                 └ '#!/usr/bin/env python3\n# -*- coding:utf-8 -*-\n# Copyright (c) Megvii, Inc. and its affiliates.\n\nimport argparse\nimport ...
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 133, in <module>
+    args=(exp, args),
+          │    └ Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=1, dist_backend='nccl', dist_url=None, exp_fil...
+          └ ╒══════════════════╤═══════════════════════╕
+            │ keys             │ values                │
+            ╞══════════════════╪═══════════════...
+
+> File "E:\clonegit项目\genshin_auto_fish\yolox\core\launch.py", line 98, in launch
+    main_func(*args)
+    │          └ (╒══════════════════╤═══════════════════════╕
+    │            │ keys             │ values                │
+    │            ╞══════════════════╪══════════════...
+    └ <function main at 0x000002517F4D74C8>
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 110, in main
+    trainer.train()
+    │       └ <function Trainer.train at 0x00000251428EE3A8>
+    └ <yolox.core.trainer.Trainer object at 0x00000251453FECC8>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 70, in train
+    self.before_train()
+    │    └ <function Trainer.before_train at 0x000002514539C168>
+    └ <yolox.core.trainer.Trainer object at 0x00000251453FECC8>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 130, in before_train
+    torch.cuda.set_device(self.local_rank)
+    │     │    │          │    └ 0
+    │     │    │          └ <yolox.core.trainer.Trainer object at 0x00000251453FECC8>
+    │     │    └ <function set_device at 0x000002517FA11A68>
+    │     └ <module 'torch.cuda' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\cuda\\__init__.py'>
+    └ <module 'torch' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\__init__.py'>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\__init__.py", line 263, in set_device
+    torch._C._cuda_setDevice(device)
+    │     │                  └ 0
+    │     └ <module 'torch._C' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\_C.cp37-win_amd64.pyd'>
+    └ <module 'torch' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\__init__.py'>
+
+AttributeError: module 'torch._C' has no attribute '_cuda_setDevice'
+2021-09-24 18:11:38.759 | INFO     | yolox.core.trainer:before_train:126 - args: Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=-1, dist_backend='nccl', dist_url=None, exp_file='../yolox/exp/yolox_tiny_fish.py', experiment_name='yolox_tiny_fish', fp16=False, machine_rank=0, name=None, num_machines=1, occupy=False, opts=[], resume=False, start_epoch=None)
+2021-09-24 18:11:38.776 | INFO     | yolox.core.trainer:before_train:127 - exp value:
+╒══════════════════╤═══════════════════════╕
+│ keys             │ values                │
+╞══════════════════╪═══════════════════════╡
+│ seed             │ None                  │
+├──────────────────┼───────────────────────┤
+│ output_dir       │ './YOLOX_outputs'     │
+├──────────────────┼───────────────────────┤
+│ print_interval   │ 10                    │
+├──────────────────┼───────────────────────┤
+│ eval_interval    │ 10                    │
+├──────────────────┼───────────────────────┤
+│ num_classes      │ 6                     │
+├──────────────────┼───────────────────────┤
+│ depth            │ 0.33                  │
+├──────────────────┼───────────────────────┤
+│ width            │ 0.375                 │
+├──────────────────┼───────────────────────┤
+│ data_num_workers │ 4                     │
+├──────────────────┼───────────────────────┤
+│ input_size       │ (640, 640)            │
+├──────────────────┼───────────────────────┤
+│ multiscale_range │ 5                     │
+├──────────────────┼───────────────────────┤
+│ data_dir         │ '../imgs/'            │
+├──────────────────┼───────────────────────┤
+│ data_name        │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ val_name         │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ train_ann        │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ val_ann          │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ mosaic_prob      │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ mixup_prob       │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ hsv_prob         │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ flip_prob        │ 0.5                   │
+├──────────────────┼───────────────────────┤
+│ degrees          │ 10.0                  │
+├──────────────────┼───────────────────────┤
+│ translate        │ 0.1                   │
+├──────────────────┼───────────────────────┤
+│ mosaic_scale     │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ mixup_scale      │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ shear            │ 2.0                   │
+├──────────────────┼───────────────────────┤
+│ perspective      │ 0.0                   │
+├──────────────────┼───────────────────────┤
+│ enable_mixup     │ False                 │
+├──────────────────┼───────────────────────┤
+│ warmup_epochs    │ 5                     │
+├──────────────────┼───────────────────────┤
+│ max_epoch        │ 35                    │
+├──────────────────┼───────────────────────┤
+│ warmup_lr        │ 0                     │
+├──────────────────┼───────────────────────┤
+│ basic_lr_per_img │ 0.00025               │
+├──────────────────┼───────────────────────┤
+│ scheduler        │ 'yoloxwarmcos'        │
+├──────────────────┼───────────────────────┤
+│ no_aug_epochs    │ 15                    │
+├──────────────────┼───────────────────────┤
+│ min_lr_ratio     │ 0.05                  │
+├──────────────────┼───────────────────────┤
+│ ema              │ True                  │
+├──────────────────┼───────────────────────┤
+│ weight_decay     │ 0.0005                │
+├──────────────────┼───────────────────────┤
+│ momentum         │ 0.9                   │
+├──────────────────┼───────────────────────┤
+│ exp_name         │ 'yolox_tiny_fish'     │
+├──────────────────┼───────────────────────┤
+│ test_size        │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ test_conf        │ 0.01                  │
+├──────────────────┼───────────────────────┤
+│ nmsthre          │ 0.65                  │
+├──────────────────┼───────────────────────┤
+│ input_scale      │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ random_size      │ (10, 20)              │
+╘══════════════════╧═══════════════════════╛
+2021-09-24 18:11:41.099 | ERROR    | yolox.core.launch:launch:98 - An error has been caught in function 'launch', process 'MainProcess' (15324), thread 'MainThread' (29344):
+Traceback (most recent call last):
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2141, in <module>
+    main()
+    └ <function main at 0x0000025238F5A558>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2132, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+              │        │   │                          └ False
+              │        │   └ {'port': 4871, 'vm_type': None, 'client': '127.0.0.1', 'server': False, 'DEBUG_RECORD_SOCKET_READS': False, 'multiproc': True...
+              │        └ <function PyDB.run at 0x0000025238F57558>
+              └ <__main__.PyDB object at 0x0000025274305A48>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1441, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+           │    │     │          │               │            │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+           │    │     │          │               └ None
+           │    │     │          └ ''
+           │    │     └ False
+           │    └ <function PyDB._exec at 0x0000025238F575E8>
+           └ <__main__.PyDB object at 0x0000025274305A48>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1448, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+    │             │        │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+    │             └ <function execfile at 0x000002527F20E8B8>
+    └ <module '_pydev_bundle.pydev_imports' from 'E:\\PYCHARM\\PyCharm 2020.2.3\\plugins\\python\\helpers\\pydev\\_pydev_bundle\\py...
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+                 │              │              │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              │              └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+                 └ '#!/usr/bin/env python3\n# -*- coding:utf-8 -*-\n# Copyright (c) Megvii, Inc. and its affiliates.\n\nimport argparse\nimport ...
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 133, in <module>
+    args=(exp, args),
+          │    └ Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=-1, dist_backend='nccl', dist_url=None, exp_fi...
+          └ ╒══════════════════╤═══════════════════════╕
+            │ keys             │ values                │
+            ╞══════════════════╪═══════════════...
+
+> File "E:\clonegit项目\genshin_auto_fish\yolox\core\launch.py", line 98, in launch
+    main_func(*args)
+    │          └ (╒══════════════════╤═══════════════════════╕
+    │            │ keys             │ values                │
+    │            ╞══════════════════╪══════════════...
+    └ <function main at 0x00000252390784C8>
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 110, in main
+    trainer.train()
+    │       └ <function Trainer.train at 0x000002523C33E3A8>
+    └ <yolox.core.trainer.Trainer object at 0x000002523CC0C448>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 70, in train
+    self.before_train()
+    │    └ <function Trainer.before_train at 0x000002523EDE5168>
+    └ <yolox.core.trainer.Trainer object at 0x000002523CC0C448>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 130, in before_train
+    torch.cuda.set_device(self.local_rank)
+    │     │    │          │    └ 0
+    │     │    │          └ <yolox.core.trainer.Trainer object at 0x000002523CC0C448>
+    │     │    └ <function set_device at 0x000002523B551A68>
+    │     └ <module 'torch.cuda' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\cuda\\__init__.py'>
+    └ <module 'torch' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\__init__.py'>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\__init__.py", line 263, in set_device
+    torch._C._cuda_setDevice(device)
+    │     │                  └ 0
+    │     └ <module 'torch._C' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\_C.cp37-win_amd64.pyd'>
+    └ <module 'torch' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\__init__.py'>
+
+AttributeError: module 'torch._C' has no attribute '_cuda_setDevice'
+2021-09-24 18:12:34.092 | INFO     | yolox.core.trainer:before_train:126 - args: Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=-1, dist_backend='nccl', dist_url=None, exp_file='../yolox/exp/yolox_tiny_fish.py', experiment_name='yolox_tiny_fish', fp16=False, machine_rank=0, name=None, num_machines=1, occupy=False, opts=[], resume=False, start_epoch=None)
+2021-09-24 18:12:34.109 | INFO     | yolox.core.trainer:before_train:127 - exp value:
+╒══════════════════╤═══════════════════════╕
+│ keys             │ values                │
+╞══════════════════╪═══════════════════════╡
+│ seed             │ None                  │
+├──────────────────┼───────────────────────┤
+│ output_dir       │ './YOLOX_outputs'     │
+├──────────────────┼───────────────────────┤
+│ print_interval   │ 10                    │
+├──────────────────┼───────────────────────┤
+│ eval_interval    │ 10                    │
+├──────────────────┼───────────────────────┤
+│ num_classes      │ 6                     │
+├──────────────────┼───────────────────────┤
+│ depth            │ 0.33                  │
+├──────────────────┼───────────────────────┤
+│ width            │ 0.375                 │
+├──────────────────┼───────────────────────┤
+│ data_num_workers │ 4                     │
+├──────────────────┼───────────────────────┤
+│ input_size       │ (640, 640)            │
+├──────────────────┼───────────────────────┤
+│ multiscale_range │ 5                     │
+├──────────────────┼───────────────────────┤
+│ data_dir         │ '../imgs/'            │
+├──────────────────┼───────────────────────┤
+│ data_name        │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ val_name         │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ train_ann        │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ val_ann          │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ mosaic_prob      │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ mixup_prob       │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ hsv_prob         │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ flip_prob        │ 0.5                   │
+├──────────────────┼───────────────────────┤
+│ degrees          │ 10.0                  │
+├──────────────────┼───────────────────────┤
+│ translate        │ 0.1                   │
+├──────────────────┼───────────────────────┤
+│ mosaic_scale     │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ mixup_scale      │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ shear            │ 2.0                   │
+├──────────────────┼───────────────────────┤
+│ perspective      │ 0.0                   │
+├──────────────────┼───────────────────────┤
+│ enable_mixup     │ False                 │
+├──────────────────┼───────────────────────┤
+│ warmup_epochs    │ 5                     │
+├──────────────────┼───────────────────────┤
+│ max_epoch        │ 35                    │
+├──────────────────┼───────────────────────┤
+│ warmup_lr        │ 0                     │
+├──────────────────┼───────────────────────┤
+│ basic_lr_per_img │ 0.00025               │
+├──────────────────┼───────────────────────┤
+│ scheduler        │ 'yoloxwarmcos'        │
+├──────────────────┼───────────────────────┤
+│ no_aug_epochs    │ 15                    │
+├──────────────────┼───────────────────────┤
+│ min_lr_ratio     │ 0.05                  │
+├──────────────────┼───────────────────────┤
+│ ema              │ True                  │
+├──────────────────┼───────────────────────┤
+│ weight_decay     │ 0.0005                │
+├──────────────────┼───────────────────────┤
+│ momentum         │ 0.9                   │
+├──────────────────┼───────────────────────┤
+│ exp_name         │ 'yolox_tiny_fish'     │
+├──────────────────┼───────────────────────┤
+│ test_size        │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ test_conf        │ 0.01                  │
+├──────────────────┼───────────────────────┤
+│ nmsthre          │ 0.65                  │
+├──────────────────┼───────────────────────┤
+│ input_scale      │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ random_size      │ (10, 20)              │
+╘══════════════════╧═══════════════════════╛
+2021-09-24 21:38:51.021 | INFO     | yolox.core.trainer:before_train:126 - args: Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=-1, dist_backend='nccl', dist_url=None, exp_file='../yolox/exp/yolox_tiny_fish.py', experiment_name='yolox_tiny_fish', fp16=False, machine_rank=0, name=None, num_machines=1, occupy=False, opts=[], resume=False, start_epoch=None)
+2021-09-24 21:38:51.061 | INFO     | yolox.core.trainer:before_train:127 - exp value:
+╒══════════════════╤═══════════════════════╕
+│ keys             │ values                │
+╞══════════════════╪═══════════════════════╡
+│ seed             │ None                  │
+├──────────────────┼───────────────────────┤
+│ output_dir       │ './YOLOX_outputs'     │
+├──────────────────┼───────────────────────┤
+│ print_interval   │ 10                    │
+├──────────────────┼───────────────────────┤
+│ eval_interval    │ 10                    │
+├──────────────────┼───────────────────────┤
+│ num_classes      │ 6                     │
+├──────────────────┼───────────────────────┤
+│ depth            │ 0.33                  │
+├──────────────────┼───────────────────────┤
+│ width            │ 0.375                 │
+├──────────────────┼───────────────────────┤
+│ data_num_workers │ 4                     │
+├──────────────────┼───────────────────────┤
+│ input_size       │ (640, 640)            │
+├──────────────────┼───────────────────────┤
+│ multiscale_range │ 5                     │
+├──────────────────┼───────────────────────┤
+│ data_dir         │ '../imgs/'            │
+├──────────────────┼───────────────────────┤
+│ data_name        │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ val_name         │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ train_ann        │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ val_ann          │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ mosaic_prob      │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ mixup_prob       │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ hsv_prob         │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ flip_prob        │ 0.5                   │
+├──────────────────┼───────────────────────┤
+│ degrees          │ 10.0                  │
+├──────────────────┼───────────────────────┤
+│ translate        │ 0.1                   │
+├──────────────────┼───────────────────────┤
+│ mosaic_scale     │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ mixup_scale      │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ shear            │ 2.0                   │
+├──────────────────┼───────────────────────┤
+│ perspective      │ 0.0                   │
+├──────────────────┼───────────────────────┤
+│ enable_mixup     │ False                 │
+├──────────────────┼───────────────────────┤
+│ warmup_epochs    │ 5                     │
+├──────────────────┼───────────────────────┤
+│ max_epoch        │ 35                    │
+├──────────────────┼───────────────────────┤
+│ warmup_lr        │ 0                     │
+├──────────────────┼───────────────────────┤
+│ basic_lr_per_img │ 0.00025               │
+├──────────────────┼───────────────────────┤
+│ scheduler        │ 'yoloxwarmcos'        │
+├──────────────────┼───────────────────────┤
+│ no_aug_epochs    │ 15                    │
+├──────────────────┼───────────────────────┤
+│ min_lr_ratio     │ 0.05                  │
+├──────────────────┼───────────────────────┤
+│ ema              │ True                  │
+├──────────────────┼───────────────────────┤
+│ weight_decay     │ 0.0005                │
+├──────────────────┼───────────────────────┤
+│ momentum         │ 0.9                   │
+├──────────────────┼───────────────────────┤
+│ exp_name         │ 'yolox_tiny_fish'     │
+├──────────────────┼───────────────────────┤
+│ test_size        │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ test_conf        │ 0.01                  │
+├──────────────────┼───────────────────────┤
+│ nmsthre          │ 0.65                  │
+├──────────────────┼───────────────────────┤
+│ input_scale      │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ random_size      │ (10, 20)              │
+╘══════════════════╧═══════════════════════╛
+2021-09-24 21:39:40.967 | INFO     | yolox.core.trainer:before_train:126 - args: Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=-1, dist_backend='nccl', dist_url=None, exp_file='../yolox/exp/yolox_tiny_fish.py', experiment_name='yolox_tiny_fish', fp16=False, machine_rank=0, name=None, num_machines=1, occupy=False, opts=[], resume=False, start_epoch=None)
+2021-09-24 21:39:40.985 | INFO     | yolox.core.trainer:before_train:127 - exp value:
+╒══════════════════╤═══════════════════════╕
+│ keys             │ values                │
+╞══════════════════╪═══════════════════════╡
+│ seed             │ None                  │
+├──────────────────┼───────────────────────┤
+│ output_dir       │ './YOLOX_outputs'     │
+├──────────────────┼───────────────────────┤
+│ print_interval   │ 10                    │
+├──────────────────┼───────────────────────┤
+│ eval_interval    │ 10                    │
+├──────────────────┼───────────────────────┤
+│ num_classes      │ 6                     │
+├──────────────────┼───────────────────────┤
+│ depth            │ 0.33                  │
+├──────────────────┼───────────────────────┤
+│ width            │ 0.375                 │
+├──────────────────┼───────────────────────┤
+│ data_num_workers │ 4                     │
+├──────────────────┼───────────────────────┤
+│ input_size       │ (640, 640)            │
+├──────────────────┼───────────────────────┤
+│ multiscale_range │ 5                     │
+├──────────────────┼───────────────────────┤
+│ data_dir         │ '../imgs/'            │
+├──────────────────┼───────────────────────┤
+│ data_name        │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ val_name         │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ train_ann        │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ val_ann          │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ mosaic_prob      │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ mixup_prob       │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ hsv_prob         │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ flip_prob        │ 0.5                   │
+├──────────────────┼───────────────────────┤
+│ degrees          │ 10.0                  │
+├──────────────────┼───────────────────────┤
+│ translate        │ 0.1                   │
+├──────────────────┼───────────────────────┤
+│ mosaic_scale     │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ mixup_scale      │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ shear            │ 2.0                   │
+├──────────────────┼───────────────────────┤
+│ perspective      │ 0.0                   │
+├──────────────────┼───────────────────────┤
+│ enable_mixup     │ False                 │
+├──────────────────┼───────────────────────┤
+│ warmup_epochs    │ 5                     │
+├──────────────────┼───────────────────────┤
+│ max_epoch        │ 35                    │
+├──────────────────┼───────────────────────┤
+│ warmup_lr        │ 0                     │
+├──────────────────┼───────────────────────┤
+│ basic_lr_per_img │ 0.00025               │
+├──────────────────┼───────────────────────┤
+│ scheduler        │ 'yoloxwarmcos'        │
+├──────────────────┼───────────────────────┤
+│ no_aug_epochs    │ 15                    │
+├──────────────────┼───────────────────────┤
+│ min_lr_ratio     │ 0.05                  │
+├──────────────────┼───────────────────────┤
+│ ema              │ True                  │
+├──────────────────┼───────────────────────┤
+│ weight_decay     │ 0.0005                │
+├──────────────────┼───────────────────────┤
+│ momentum         │ 0.9                   │
+├──────────────────┼───────────────────────┤
+│ exp_name         │ 'yolox_tiny_fish'     │
+├──────────────────┼───────────────────────┤
+│ test_size        │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ test_conf        │ 0.01                  │
+├──────────────────┼───────────────────────┤
+│ nmsthre          │ 0.65                  │
+├──────────────────┼───────────────────────┤
+│ input_scale      │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ random_size      │ (10, 20)              │
+╘══════════════════╧═══════════════════════╛
+2021-09-24 21:39:41.503 | INFO     | yolox.core.trainer:before_train:135 - Model Summary: Params: 5.03M, Gflops: 6.40
+2021-09-24 21:39:41.509 | ERROR    | yolox.core.launch:launch:98 - An error has been caught in function 'launch', process 'MainProcess' (36928), thread 'MainThread' (27540):
+Traceback (most recent call last):
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2141, in <module>
+    main()
+    └ <function main at 0x000002502A12A558>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2132, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+              │        │   │                          └ False
+              │        │   └ {'port': 8387, 'vm_type': None, 'client': '127.0.0.1', 'server': False, 'DEBUG_RECORD_SOCKET_READS': False, 'multiproc': True...
+              │        └ <function PyDB.run at 0x000002502A127558>
+              └ <__main__.PyDB object at 0x0000025065525A48>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1441, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+           │    │     │          │               │            │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+           │    │     │          │               └ None
+           │    │     │          └ ''
+           │    │     └ False
+           │    └ <function PyDB._exec at 0x000002502A1275E8>
+           └ <__main__.PyDB object at 0x0000025065525A48>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1448, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+    │             │        │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+    │             └ <function execfile at 0x000002502842F8B8>
+    └ <module '_pydev_bundle.pydev_imports' from 'E:\\PYCHARM\\PyCharm 2020.2.3\\plugins\\python\\helpers\\pydev\\_pydev_bundle\\py...
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+                 │              │              │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              │              └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+                 └ '#!/usr/bin/env python3\n# -*- coding:utf-8 -*-\n# Copyright (c) Megvii, Inc. and its affiliates.\n\nimport argparse\nimport ...
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 133, in <module>
+    args=(exp, args),
+          │    └ Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=-1, dist_backend='nccl', dist_url=None, exp_fi...
+          └ ╒══════════════════╤═════════════════════════════════════════════════════════════════════════════════════════════════════════...
+
+> File "E:\clonegit项目\genshin_auto_fish\yolox\core\launch.py", line 98, in launch
+    main_func(*args)
+    │          └ (╒══════════════════╤════════════════════════════════════════════════════════════════════════════════════════════════════════...
+    └ <function main at 0x000002502A2483A8>
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 110, in main
+    trainer.train()
+    │       └ <function Trainer.train at 0x000002502D50F288>
+    └ <yolox.core.trainer.Trainer object at 0x0000025030016DC8>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 70, in train
+    self.before_train()
+    │    └ <function Trainer.before_train at 0x000002502FFBD048>
+    └ <yolox.core.trainer.Trainer object at 0x0000025030016DC8>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 137, in before_train
+    model.to(self.device)
+    │     │  │    └ 'cuda:0'
+    │     │  └ <yolox.core.trainer.Trainer object at 0x0000025030016DC8>
+    │     └ <function Module.to at 0x000002502C809828>
+    └ YOLOX(
+        (backbone): YOLOPAFPN(
+          (backbone): CSPDarknet(
+            (stem): Focus(
+              (conv): BaseConv(
+                (conv): ...
+
+  File "E:\PYCHARM\lib\site-packages\torch\nn\modules\module.py", line 612, in to
+    return self._apply(convert)
+           │    │      └ <function Module.to.<locals>.convert at 0x000002503235DF78>
+           │    └ <function Module._apply at 0x000002502C809288>
+           └ YOLOX(
+               (backbone): YOLOPAFPN(
+                 (backbone): CSPDarknet(
+                   (stem): Focus(
+                     (conv): BaseConv(
+                       (conv): ...
+
+  File "E:\PYCHARM\lib\site-packages\torch\nn\modules\module.py", line 359, in _apply
+    module._apply(fn)
+    │      │      └ <function Module.to.<locals>.convert at 0x000002503235DF78>
+    │      └ <function Module._apply at 0x000002502C809288>
+    └ YOLOPAFPN(
+        (backbone): CSPDarknet(
+          (stem): Focus(
+            (conv): BaseConv(
+              (conv): Conv2d(12, 24, kernel_size=(3...
+
+  File "E:\PYCHARM\lib\site-packages\torch\nn\modules\module.py", line 359, in _apply
+    module._apply(fn)
+    │      │      └ <function Module.to.<locals>.convert at 0x000002503235DF78>
+    │      └ <function Module._apply at 0x000002502C809288>
+    └ CSPDarknet(
+        (stem): Focus(
+          (conv): BaseConv(
+            (conv): Conv2d(12, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1...
+
+  File "E:\PYCHARM\lib\site-packages\torch\nn\modules\module.py", line 359, in _apply
+    module._apply(fn)
+    │      │      └ <function Module.to.<locals>.convert at 0x000002503235DF78>
+    │      └ <function Module._apply at 0x000002502C809288>
+    └ Focus(
+        (conv): BaseConv(
+          (conv): Conv2d(12, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn)...
+  [Previous line repeated 2 more times]
+
+  File "E:\PYCHARM\lib\site-packages\torch\nn\modules\module.py", line 381, in _apply
+    param_applied = fn(param)
+                    │  └ Parameter containing:
+                    │    tensor([[[[ 0.0196, -0.0195,  0.0728],
+                    │              [-0.0496,  0.0516, -0.0639],
+                    │              [ 0.0311,  0.05...
+                    └ <function Module.to.<locals>.convert at 0x000002503235DF78>
+
+  File "E:\PYCHARM\lib\site-packages\torch\nn\modules\module.py", line 610, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+           │ │  │       │        │ │                              └ False
+           │ │  │       │        │ └ <method 'is_floating_point' of 'torch._C._TensorBase' objects>
+           │ │  │       │        └ Parameter containing:
+           │ │  │       │          tensor([[[[ 0.0196, -0.0195,  0.0728],
+           │ │  │       │                    [-0.0496,  0.0516, -0.0639],
+           │ │  │       │                    [ 0.0311,  0.05...
+           │ │  │       └ None
+           │ │  └ device(type='cuda', index=0)
+           │ └ <method 'to' of 'torch._C._TensorBase' objects>
+           └ Parameter containing:
+             tensor([[[[ 0.0196, -0.0195,  0.0728],
+                       [-0.0496,  0.0516, -0.0639],
+                       [ 0.0311,  0.05...
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\__init__.py", line 166, in _lazy_init
+    raise AssertionError("Torch not compiled with CUDA enabled")
+
+AssertionError: Torch not compiled with CUDA enabled
+2021-09-24 21:44:26.538 | INFO     | yolox.core.trainer:before_train:129 - args: Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=-1, dist_backend='nccl', dist_url=None, exp_file='../yolox/exp/yolox_tiny_fish.py', experiment_name='yolox_tiny_fish', fp16=False, machine_rank=0, name=None, num_machines=1, occupy=False, opts=[], resume=False, start_epoch=None)
+2021-09-24 21:44:26.557 | INFO     | yolox.core.trainer:before_train:130 - exp value:
+╒══════════════════╤═══════════════════════╕
+│ keys             │ values                │
+╞══════════════════╪═══════════════════════╡
+│ seed             │ None                  │
+├──────────────────┼───────────────────────┤
+│ output_dir       │ './YOLOX_outputs'     │
+├──────────────────┼───────────────────────┤
+│ print_interval   │ 10                    │
+├──────────────────┼───────────────────────┤
+│ eval_interval    │ 10                    │
+├──────────────────┼───────────────────────┤
+│ num_classes      │ 6                     │
+├──────────────────┼───────────────────────┤
+│ depth            │ 0.33                  │
+├──────────────────┼───────────────────────┤
+│ width            │ 0.375                 │
+├──────────────────┼───────────────────────┤
+│ data_num_workers │ 4                     │
+├──────────────────┼───────────────────────┤
+│ input_size       │ (640, 640)            │
+├──────────────────┼───────────────────────┤
+│ multiscale_range │ 5                     │
+├──────────────────┼───────────────────────┤
+│ data_dir         │ '../imgs/'            │
+├──────────────────┼───────────────────────┤
+│ data_name        │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ val_name         │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ train_ann        │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ val_ann          │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ mosaic_prob      │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ mixup_prob       │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ hsv_prob         │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ flip_prob        │ 0.5                   │
+├──────────────────┼───────────────────────┤
+│ degrees          │ 10.0                  │
+├──────────────────┼───────────────────────┤
+│ translate        │ 0.1                   │
+├──────────────────┼───────────────────────┤
+│ mosaic_scale     │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ mixup_scale      │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ shear            │ 2.0                   │
+├──────────────────┼───────────────────────┤
+│ perspective      │ 0.0                   │
+├──────────────────┼───────────────────────┤
+│ enable_mixup     │ False                 │
+├──────────────────┼───────────────────────┤
+│ warmup_epochs    │ 5                     │
+├──────────────────┼───────────────────────┤
+│ max_epoch        │ 35                    │
+├──────────────────┼───────────────────────┤
+│ warmup_lr        │ 0                     │
+├──────────────────┼───────────────────────┤
+│ basic_lr_per_img │ 0.00025               │
+├──────────────────┼───────────────────────┤
+│ scheduler        │ 'yoloxwarmcos'        │
+├──────────────────┼───────────────────────┤
+│ no_aug_epochs    │ 15                    │
+├──────────────────┼───────────────────────┤
+│ min_lr_ratio     │ 0.05                  │
+├──────────────────┼───────────────────────┤
+│ ema              │ True                  │
+├──────────────────┼───────────────────────┤
+│ weight_decay     │ 0.0005                │
+├──────────────────┼───────────────────────┤
+│ momentum         │ 0.9                   │
+├──────────────────┼───────────────────────┤
+│ exp_name         │ 'yolox_tiny_fish'     │
+├──────────────────┼───────────────────────┤
+│ test_size        │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ test_conf        │ 0.01                  │
+├──────────────────┼───────────────────────┤
+│ nmsthre          │ 0.65                  │
+├──────────────────┼───────────────────────┤
+│ input_scale      │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ random_size      │ (10, 20)              │
+╘══════════════════╧═══════════════════════╛
+2021-09-24 21:44:33.235 | INFO     | yolox.core.trainer:before_train:138 - Model Summary: Params: 5.03M, Gflops: 6.40
+2021-09-24 21:44:46.884 | INFO     | yolox.core.trainer:resume_train:291 - loading checkpoint for fine tuning
+2021-09-24 21:44:47.067 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.0.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 21:44:47.068 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.0.bias in model is torch.Size([6]).
+2021-09-24 21:44:47.068 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.1.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 21:44:47.069 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.1.bias in model is torch.Size([6]).
+2021-09-24 21:44:47.069 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.2.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 21:44:47.069 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.2.bias in model is torch.Size([6]).
+2021-09-24 21:45:49.773 | INFO     | yolox.data.datasets.coco:__init__:45 - loading annotations into memory...
+2021-09-24 21:45:49.791 | INFO     | yolox.data.datasets.coco:__init__:45 - Done (t=0.02s)
+2021-09-24 21:45:49.792 | INFO     | pycocotools.coco:__init__:88 - creating index...
+2021-09-24 21:45:49.793 | INFO     | pycocotools.coco:__init__:88 - index created!
+2021-09-24 21:56:08.134 | INFO     | yolox.core.trainer:before_train:129 - args: Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=-1, dist_backend='nccl', dist_url=None, exp_file='../yolox/exp/yolox_tiny_fish.py', experiment_name='yolox_tiny_fish', fp16=False, machine_rank=0, name=None, num_machines=1, occupy=False, opts=[], resume=False, start_epoch=None)
+2021-09-24 21:56:08.152 | INFO     | yolox.core.trainer:before_train:130 - exp value:
+╒══════════════════╤═══════════════════════╕
+│ keys             │ values                │
+╞══════════════════╪═══════════════════════╡
+│ seed             │ None                  │
+├──────────────────┼───────────────────────┤
+│ output_dir       │ './YOLOX_outputs'     │
+├──────────────────┼───────────────────────┤
+│ print_interval   │ 10                    │
+├──────────────────┼───────────────────────┤
+│ eval_interval    │ 10                    │
+├──────────────────┼───────────────────────┤
+│ num_classes      │ 6                     │
+├──────────────────┼───────────────────────┤
+│ depth            │ 0.33                  │
+├──────────────────┼───────────────────────┤
+│ width            │ 0.375                 │
+├──────────────────┼───────────────────────┤
+│ data_num_workers │ 4                     │
+├──────────────────┼───────────────────────┤
+│ input_size       │ (640, 640)            │
+├──────────────────┼───────────────────────┤
+│ multiscale_range │ 5                     │
+├──────────────────┼───────────────────────┤
+│ data_dir         │ '../imgs/'            │
+├──────────────────┼───────────────────────┤
+│ data_name        │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ val_name         │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ train_ann        │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ val_ann          │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ mosaic_prob      │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ mixup_prob       │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ hsv_prob         │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ flip_prob        │ 0.5                   │
+├──────────────────┼───────────────────────┤
+│ degrees          │ 10.0                  │
+├──────────────────┼───────────────────────┤
+│ translate        │ 0.1                   │
+├──────────────────┼───────────────────────┤
+│ mosaic_scale     │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ mixup_scale      │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ shear            │ 2.0                   │
+├──────────────────┼───────────────────────┤
+│ perspective      │ 0.0                   │
+├──────────────────┼───────────────────────┤
+│ enable_mixup     │ False                 │
+├──────────────────┼───────────────────────┤
+│ warmup_epochs    │ 5                     │
+├──────────────────┼───────────────────────┤
+│ max_epoch        │ 35                    │
+├──────────────────┼───────────────────────┤
+│ warmup_lr        │ 0                     │
+├──────────────────┼───────────────────────┤
+│ basic_lr_per_img │ 0.00025               │
+├──────────────────┼───────────────────────┤
+│ scheduler        │ 'yoloxwarmcos'        │
+├──────────────────┼───────────────────────┤
+│ no_aug_epochs    │ 15                    │
+├──────────────────┼───────────────────────┤
+│ min_lr_ratio     │ 0.05                  │
+├──────────────────┼───────────────────────┤
+│ ema              │ True                  │
+├──────────────────┼───────────────────────┤
+│ weight_decay     │ 0.0005                │
+├──────────────────┼───────────────────────┤
+│ momentum         │ 0.9                   │
+├──────────────────┼───────────────────────┤
+│ exp_name         │ 'yolox_tiny_fish'     │
+├──────────────────┼───────────────────────┤
+│ test_size        │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ test_conf        │ 0.01                  │
+├──────────────────┼───────────────────────┤
+│ nmsthre          │ 0.65                  │
+├──────────────────┼───────────────────────┤
+│ input_scale      │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ random_size      │ (10, 20)              │
+╘══════════════════╧═══════════════════════╛
+2021-09-24 21:56:12.082 | INFO     | yolox.core.trainer:before_train:138 - Model Summary: Params: 5.03M, Gflops: 6.40
+2021-09-24 21:56:12.966 | INFO     | yolox.core.trainer:resume_train:291 - loading checkpoint for fine tuning
+2021-09-24 21:56:13.072 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.0.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 21:56:13.073 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.0.bias in model is torch.Size([6]).
+2021-09-24 21:56:13.073 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.1.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 21:56:13.074 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.1.bias in model is torch.Size([6]).
+2021-09-24 21:56:13.074 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.2.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 21:56:13.075 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.2.bias in model is torch.Size([6]).
+2021-09-24 21:56:13.167 | INFO     | yolox.data.datasets.coco:__init__:45 - loading annotations into memory...
+2021-09-24 21:56:13.171 | INFO     | yolox.data.datasets.coco:__init__:45 - Done (t=0.00s)
+2021-09-24 21:56:13.171 | INFO     | pycocotools.coco:__init__:88 - creating index...
+2021-09-24 21:56:13.173 | INFO     | pycocotools.coco:__init__:88 - index created!
+2021-09-24 21:56:13.270 | INFO     | yolox.core.trainer:before_train:156 - init prefetcher, this might take one minute or less...
+2021-09-24 21:56:28.437 | ERROR    | yolox.core.launch:launch:98 - An error has been caught in function 'launch', process 'MainProcess' (25472), thread 'MainThread' (8412):
+Traceback (most recent call last):
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2141, in <module>
+    main()
+    └ <function main at 0x000001B8C399A558>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2132, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+              │        │   │                          └ False
+              │        │   └ {'port': 4535, 'vm_type': None, 'client': '127.0.0.1', 'server': False, 'DEBUG_RECORD_SOCKET_READS': False, 'multiproc': True...
+              │        └ <function PyDB.run at 0x000001B8C3997558>
+              └ <__main__.PyDB object at 0x000001B8FF0E5A48>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1441, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+           │    │     │          │               │            │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+           │    │     │          │               └ None
+           │    │     │          └ ''
+           │    │     └ False
+           │    └ <function PyDB._exec at 0x000001B8C39975E8>
+           └ <__main__.PyDB object at 0x000001B8FF0E5A48>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1448, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+    │             │        │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+    │             └ <function execfile at 0x000001B8C1C9E8B8>
+    └ <module '_pydev_bundle.pydev_imports' from 'E:\\PYCHARM\\PyCharm 2020.2.3\\plugins\\python\\helpers\\pydev\\_pydev_bundle\\py...
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+                 │              │              │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              │              └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+                 └ '#!/usr/bin/env python3\n# -*- coding:utf-8 -*-\n# Copyright (c) Megvii, Inc. and its affiliates.\n\nimport argparse\nimport ...
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 133, in <module>
+    args=(exp, args),
+          │    └ Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=-1, dist_backend='nccl', dist_url=None, exp_fi...
+          └ ╒══════════════════╤═════════════════════════════════════════════════════════════════════════════════════════════════════════...
+
+> File "E:\clonegit项目\genshin_auto_fish\yolox\core\launch.py", line 98, in launch
+    main_func(*args)
+    │          └ (╒══════════════════╤════════════════════════════════════════════════════════════════════════════════════════════════════════...
+    └ <function main at 0x000001B8C3AB93A8>
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 110, in main
+    trainer.train()
+    │       └ <function Trainer.train at 0x000001B8C6D8E288>
+    └ <yolox.core.trainer.Trainer object at 0x000001B8C989EE88>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 73, in train
+    self.before_train()
+    │    └ <function Trainer.before_train at 0x000001B8C983E048>
+    └ <yolox.core.trainer.Trainer object at 0x000001B8C989EE88>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 157, in before_train
+    self.prefetcher = DataPrefetcher(self.train_loader)
+    │                 │              │    └ <yolox.data.dataloading.DataLoader object at 0x000001B8CB6B91C8>
+    │                 │              └ <yolox.core.trainer.Trainer object at 0x000001B8C989EE88>
+    │                 └ <class 'yolox.data.data_prefetcher.DataPrefetcher'>
+    └ <yolox.core.trainer.Trainer object at 0x000001B8C989EE88>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\data\data_prefetcher.py", line 18, in __init__
+    self.stream = torch.cuda.Stream()
+    │             │     │    └ <class 'torch.cuda.streams.Stream'>
+    │             │     └ <module 'torch.cuda' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\cuda\\__init__.py'>
+    │             └ <module 'torch' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\__init__.py'>
+    └ <yolox.data.data_prefetcher.DataPrefetcher object at 0x000001B8CB23EA08>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\streams.py", line 32, in __new__
+    with torch.cuda.device(device):
+         │     │    │      └ None
+         │     │    └ <class 'torch.cuda.device'>
+         │     └ <module 'torch.cuda' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\cuda\\__init__.py'>
+         └ <module 'torch' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\__init__.py'>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\__init__.py", line 219, in __init__
+    self.idx = _get_device_index(device, optional=True)
+    │          │                 └ None
+    │          └ <function _get_device_index at 0x000001B8C5F389D8>
+    └ <torch.cuda.device object at 0x000001B8CB2D9288>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\_utils.py", line 32, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           │                       │       │         └ False
+           │                       │       └ True
+           │                       └ None
+           └ <function _get_device_index at 0x000001B8C3B6F798>
+
+  File "E:\PYCHARM\lib\site-packages\torch\_utils.py", line 489, in _get_device_index
+    device_idx = _get_current_device_index()
+                 └ <function _get_current_device_index at 0x000001B8C3B6F5E8>
+
+  File "E:\PYCHARM\lib\site-packages\torch\_utils.py", line 448, in _get_current_device_index
+    return _get_device_attr(lambda m: m.current_device())
+           └ <function _get_device_attr at 0x000001B8C3B6F558>
+
+  File "E:\PYCHARM\lib\site-packages\torch\_utils.py", line 440, in _get_device_attr
+    if device_type.lower() == "cuda":
+       └ None
+
+AttributeError: 'NoneType' object has no attribute 'lower'
+2021-09-24 21:58:11.864 | INFO     | yolox.core.trainer:before_train:129 - args: Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=-1, dist_backend='nccl', dist_url=None, exp_file='../yolox/exp/yolox_tiny_fish.py', experiment_name='yolox_tiny_fish', fp16=False, machine_rank=0, name=None, num_machines=1, occupy=False, opts=[], resume=False, start_epoch=None)
+2021-09-24 21:58:11.884 | INFO     | yolox.core.trainer:before_train:130 - exp value:
+╒══════════════════╤═══════════════════════╕
+│ keys             │ values                │
+╞══════════════════╪═══════════════════════╡
+│ seed             │ None                  │
+├──────────────────┼───────────────────────┤
+│ output_dir       │ './YOLOX_outputs'     │
+├──────────────────┼───────────────────────┤
+│ print_interval   │ 10                    │
+├──────────────────┼───────────────────────┤
+│ eval_interval    │ 10                    │
+├──────────────────┼───────────────────────┤
+│ num_classes      │ 6                     │
+├──────────────────┼───────────────────────┤
+│ depth            │ 0.33                  │
+├──────────────────┼───────────────────────┤
+│ width            │ 0.375                 │
+├──────────────────┼───────────────────────┤
+│ data_num_workers │ 4                     │
+├──────────────────┼───────────────────────┤
+│ input_size       │ (640, 640)            │
+├──────────────────┼───────────────────────┤
+│ multiscale_range │ 5                     │
+├──────────────────┼───────────────────────┤
+│ data_dir         │ '../imgs/'            │
+├──────────────────┼───────────────────────┤
+│ data_name        │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ val_name         │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ train_ann        │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ val_ann          │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ mosaic_prob      │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ mixup_prob       │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ hsv_prob         │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ flip_prob        │ 0.5                   │
+├──────────────────┼───────────────────────┤
+│ degrees          │ 10.0                  │
+├──────────────────┼───────────────────────┤
+│ translate        │ 0.1                   │
+├──────────────────┼───────────────────────┤
+│ mosaic_scale     │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ mixup_scale      │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ shear            │ 2.0                   │
+├──────────────────┼───────────────────────┤
+│ perspective      │ 0.0                   │
+├──────────────────┼───────────────────────┤
+│ enable_mixup     │ False                 │
+├──────────────────┼───────────────────────┤
+│ warmup_epochs    │ 5                     │
+├──────────────────┼───────────────────────┤
+│ max_epoch        │ 35                    │
+├──────────────────┼───────────────────────┤
+│ warmup_lr        │ 0                     │
+├──────────────────┼───────────────────────┤
+│ basic_lr_per_img │ 0.00025               │
+├──────────────────┼───────────────────────┤
+│ scheduler        │ 'yoloxwarmcos'        │
+├──────────────────┼───────────────────────┤
+│ no_aug_epochs    │ 15                    │
+├──────────────────┼───────────────────────┤
+│ min_lr_ratio     │ 0.05                  │
+├──────────────────┼───────────────────────┤
+│ ema              │ True                  │
+├──────────────────┼───────────────────────┤
+│ weight_decay     │ 0.0005                │
+├──────────────────┼───────────────────────┤
+│ momentum         │ 0.9                   │
+├──────────────────┼───────────────────────┤
+│ exp_name         │ 'yolox_tiny_fish'     │
+├──────────────────┼───────────────────────┤
+│ test_size        │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ test_conf        │ 0.01                  │
+├──────────────────┼───────────────────────┤
+│ nmsthre          │ 0.65                  │
+├──────────────────┼───────────────────────┤
+│ input_scale      │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ random_size      │ (10, 20)              │
+╘══════════════════╧═══════════════════════╛
+2021-09-24 21:58:13.172 | INFO     | yolox.core.trainer:before_train:138 - Model Summary: Params: 5.03M, Gflops: 6.40
+2021-09-24 21:58:16.238 | INFO     | yolox.core.trainer:resume_train:291 - loading checkpoint for fine tuning
+2021-09-24 21:58:16.346 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.0.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 21:58:16.347 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.0.bias in model is torch.Size([6]).
+2021-09-24 21:58:16.348 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.1.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 21:58:16.348 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.1.bias in model is torch.Size([6]).
+2021-09-24 21:58:16.349 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.2.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 21:58:16.350 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.2.bias in model is torch.Size([6]).
+2021-09-24 21:58:51.111 | INFO     | yolox.data.datasets.coco:__init__:45 - loading annotations into memory...
+2021-09-24 21:58:51.115 | INFO     | yolox.data.datasets.coco:__init__:45 - Done (t=0.00s)
+2021-09-24 21:58:51.115 | INFO     | pycocotools.coco:__init__:88 - creating index...
+2021-09-24 21:58:51.116 | INFO     | pycocotools.coco:__init__:88 - index created!
+2021-09-24 21:58:51.567 | INFO     | yolox.core.trainer:before_train:156 - init prefetcher, this might take one minute or less...
+2021-09-24 22:14:53.311 | INFO     | yolox.core.trainer:before_train:129 - args: Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=-1, dist_backend='nccl', dist_url=None, exp_file='../yolox/exp/yolox_tiny_fish.py', experiment_name='yolox_tiny_fish', fp16=False, machine_rank=0, name=None, num_machines=1, occupy=False, opts=[], resume=False, start_epoch=None)
+2021-09-24 22:14:53.328 | INFO     | yolox.core.trainer:before_train:130 - exp value:
+╒══════════════════╤═══════════════════════╕
+│ keys             │ values                │
+╞══════════════════╪═══════════════════════╡
+│ seed             │ None                  │
+├──────────────────┼───────────────────────┤
+│ output_dir       │ './YOLOX_outputs'     │
+├──────────────────┼───────────────────────┤
+│ print_interval   │ 10                    │
+├──────────────────┼───────────────────────┤
+│ eval_interval    │ 10                    │
+├──────────────────┼───────────────────────┤
+│ num_classes      │ 6                     │
+├──────────────────┼───────────────────────┤
+│ depth            │ 0.33                  │
+├──────────────────┼───────────────────────┤
+│ width            │ 0.375                 │
+├──────────────────┼───────────────────────┤
+│ data_num_workers │ 4                     │
+├──────────────────┼───────────────────────┤
+│ input_size       │ (640, 640)            │
+├──────────────────┼───────────────────────┤
+│ multiscale_range │ 5                     │
+├──────────────────┼───────────────────────┤
+│ data_dir         │ '../imgs/'            │
+├──────────────────┼───────────────────────┤
+│ data_name        │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ val_name         │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ train_ann        │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ val_ann          │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ mosaic_prob      │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ mixup_prob       │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ hsv_prob         │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ flip_prob        │ 0.5                   │
+├──────────────────┼───────────────────────┤
+│ degrees          │ 10.0                  │
+├──────────────────┼───────────────────────┤
+│ translate        │ 0.1                   │
+├──────────────────┼───────────────────────┤
+│ mosaic_scale     │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ mixup_scale      │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ shear            │ 2.0                   │
+├──────────────────┼───────────────────────┤
+│ perspective      │ 0.0                   │
+├──────────────────┼───────────────────────┤
+│ enable_mixup     │ False                 │
+├──────────────────┼───────────────────────┤
+│ warmup_epochs    │ 5                     │
+├──────────────────┼───────────────────────┤
+│ max_epoch        │ 35                    │
+├──────────────────┼───────────────────────┤
+│ warmup_lr        │ 0                     │
+├──────────────────┼───────────────────────┤
+│ basic_lr_per_img │ 0.00025               │
+├──────────────────┼───────────────────────┤
+│ scheduler        │ 'yoloxwarmcos'        │
+├──────────────────┼───────────────────────┤
+│ no_aug_epochs    │ 15                    │
+├──────────────────┼───────────────────────┤
+│ min_lr_ratio     │ 0.05                  │
+├──────────────────┼───────────────────────┤
+│ ema              │ True                  │
+├──────────────────┼───────────────────────┤
+│ weight_decay     │ 0.0005                │
+├──────────────────┼───────────────────────┤
+│ momentum         │ 0.9                   │
+├──────────────────┼───────────────────────┤
+│ exp_name         │ 'yolox_tiny_fish'     │
+├──────────────────┼───────────────────────┤
+│ test_size        │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ test_conf        │ 0.01                  │
+├──────────────────┼───────────────────────┤
+│ nmsthre          │ 0.65                  │
+├──────────────────┼───────────────────────┤
+│ input_scale      │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ random_size      │ (10, 20)              │
+╘══════════════════╧═══════════════════════╛
+2021-09-24 22:14:54.669 | INFO     | yolox.core.trainer:before_train:138 - Model Summary: Params: 5.03M, Gflops: 6.40
+2021-09-24 22:14:58.046 | INFO     | yolox.core.trainer:resume_train:291 - loading checkpoint for fine tuning
+2021-09-24 22:14:58.213 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.0.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:14:58.214 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.0.bias in model is torch.Size([6]).
+2021-09-24 22:14:58.214 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.1.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:14:58.215 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.1.bias in model is torch.Size([6]).
+2021-09-24 22:14:58.215 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.2.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:14:58.216 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.2.bias in model is torch.Size([6]).
+2021-09-24 22:15:00.072 | INFO     | yolox.data.datasets.coco:__init__:45 - loading annotations into memory...
+2021-09-24 22:15:00.077 | INFO     | yolox.data.datasets.coco:__init__:45 - Done (t=0.00s)
+2021-09-24 22:15:00.078 | INFO     | pycocotools.coco:__init__:88 - creating index...
+2021-09-24 22:15:00.079 | INFO     | pycocotools.coco:__init__:88 - index created!
+2021-09-24 22:15:00.153 | INFO     | yolox.core.trainer:before_train:156 - init prefetcher, this might take one minute or less...
+2021-09-24 22:19:50.515 | INFO     | yolox.core.trainer:before_train:129 - args: Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=-1, dist_backend='nccl', dist_url=None, exp_file='../yolox/exp/yolox_tiny_fish.py', experiment_name='yolox_tiny_fish', fp16=False, machine_rank=0, name=None, num_machines=1, occupy=False, opts=[], resume=False, start_epoch=None)
+2021-09-24 22:19:50.532 | INFO     | yolox.core.trainer:before_train:130 - exp value:
+╒══════════════════╤═══════════════════════╕
+│ keys             │ values                │
+╞══════════════════╪═══════════════════════╡
+│ seed             │ None                  │
+├──────────────────┼───────────────────────┤
+│ output_dir       │ './YOLOX_outputs'     │
+├──────────────────┼───────────────────────┤
+│ print_interval   │ 10                    │
+├──────────────────┼───────────────────────┤
+│ eval_interval    │ 10                    │
+├──────────────────┼───────────────────────┤
+│ num_classes      │ 6                     │
+├──────────────────┼───────────────────────┤
+│ depth            │ 0.33                  │
+├──────────────────┼───────────────────────┤
+│ width            │ 0.375                 │
+├──────────────────┼───────────────────────┤
+│ data_num_workers │ 4                     │
+├──────────────────┼───────────────────────┤
+│ input_size       │ (640, 640)            │
+├──────────────────┼───────────────────────┤
+│ multiscale_range │ 5                     │
+├──────────────────┼───────────────────────┤
+│ data_dir         │ '../imgs/'            │
+├──────────────────┼───────────────────────┤
+│ data_name        │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ val_name         │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ train_ann        │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ val_ann          │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ mosaic_prob      │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ mixup_prob       │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ hsv_prob         │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ flip_prob        │ 0.5                   │
+├──────────────────┼───────────────────────┤
+│ degrees          │ 10.0                  │
+├──────────────────┼───────────────────────┤
+│ translate        │ 0.1                   │
+├──────────────────┼───────────────────────┤
+│ mosaic_scale     │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ mixup_scale      │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ shear            │ 2.0                   │
+├──────────────────┼───────────────────────┤
+│ perspective      │ 0.0                   │
+├──────────────────┼───────────────────────┤
+│ enable_mixup     │ False                 │
+├──────────────────┼───────────────────────┤
+│ warmup_epochs    │ 5                     │
+├──────────────────┼───────────────────────┤
+│ max_epoch        │ 35                    │
+├──────────────────┼───────────────────────┤
+│ warmup_lr        │ 0                     │
+├──────────────────┼───────────────────────┤
+│ basic_lr_per_img │ 0.00025               │
+├──────────────────┼───────────────────────┤
+│ scheduler        │ 'yoloxwarmcos'        │
+├──────────────────┼───────────────────────┤
+│ no_aug_epochs    │ 15                    │
+├──────────────────┼───────────────────────┤
+│ min_lr_ratio     │ 0.05                  │
+├──────────────────┼───────────────────────┤
+│ ema              │ True                  │
+├──────────────────┼───────────────────────┤
+│ weight_decay     │ 0.0005                │
+├──────────────────┼───────────────────────┤
+│ momentum         │ 0.9                   │
+├──────────────────┼───────────────────────┤
+│ exp_name         │ 'yolox_tiny_fish'     │
+├──────────────────┼───────────────────────┤
+│ test_size        │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ test_conf        │ 0.01                  │
+├──────────────────┼───────────────────────┤
+│ nmsthre          │ 0.65                  │
+├──────────────────┼───────────────────────┤
+│ input_scale      │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ random_size      │ (10, 20)              │
+╘══════════════════╧═══════════════════════╛
+2021-09-24 22:19:57.080 | INFO     | yolox.core.trainer:before_train:138 - Model Summary: Params: 5.03M, Gflops: 6.40
+2021-09-24 22:19:58.746 | INFO     | yolox.core.trainer:resume_train:291 - loading checkpoint for fine tuning
+2021-09-24 22:19:58.854 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.0.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:19:58.855 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.0.bias in model is torch.Size([6]).
+2021-09-24 22:19:58.855 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.1.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:19:58.855 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.1.bias in model is torch.Size([6]).
+2021-09-24 22:19:58.856 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.2.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:19:58.856 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.2.bias in model is torch.Size([6]).
+2021-09-24 22:19:59.503 | INFO     | yolox.data.datasets.coco:__init__:45 - loading annotations into memory...
+2021-09-24 22:19:59.507 | INFO     | yolox.data.datasets.coco:__init__:45 - Done (t=0.00s)
+2021-09-24 22:19:59.507 | INFO     | pycocotools.coco:__init__:88 - creating index...
+2021-09-24 22:19:59.508 | INFO     | pycocotools.coco:__init__:88 - index created!
+2021-09-24 22:19:59.583 | INFO     | yolox.core.trainer:before_train:156 - init prefetcher, this might take one minute or less...
+2021-09-24 22:21:33.219 | INFO     | yolox.core.trainer:before_train:129 - args: Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=-1, dist_backend='nccl', dist_url=None, exp_file='../yolox/exp/yolox_tiny_fish.py', experiment_name='yolox_tiny_fish', fp16=False, machine_rank=0, name=None, num_machines=1, occupy=False, opts=[], resume=False, start_epoch=None)
+2021-09-24 22:21:33.237 | INFO     | yolox.core.trainer:before_train:130 - exp value:
+╒══════════════════╤═══════════════════════╕
+│ keys             │ values                │
+╞══════════════════╪═══════════════════════╡
+│ seed             │ None                  │
+├──────────────────┼───────────────────────┤
+│ output_dir       │ './YOLOX_outputs'     │
+├──────────────────┼───────────────────────┤
+│ print_interval   │ 10                    │
+├──────────────────┼───────────────────────┤
+│ eval_interval    │ 10                    │
+├──────────────────┼───────────────────────┤
+│ num_classes      │ 6                     │
+├──────────────────┼───────────────────────┤
+│ depth            │ 0.33                  │
+├──────────────────┼───────────────────────┤
+│ width            │ 0.375                 │
+├──────────────────┼───────────────────────┤
+│ data_num_workers │ 4                     │
+├──────────────────┼───────────────────────┤
+│ input_size       │ (640, 640)            │
+├──────────────────┼───────────────────────┤
+│ multiscale_range │ 5                     │
+├──────────────────┼───────────────────────┤
+│ data_dir         │ '../imgs/'            │
+├──────────────────┼───────────────────────┤
+│ data_name        │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ val_name         │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ train_ann        │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ val_ann          │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ mosaic_prob      │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ mixup_prob       │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ hsv_prob         │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ flip_prob        │ 0.5                   │
+├──────────────────┼───────────────────────┤
+│ degrees          │ 10.0                  │
+├──────────────────┼───────────────────────┤
+│ translate        │ 0.1                   │
+├──────────────────┼───────────────────────┤
+│ mosaic_scale     │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ mixup_scale      │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ shear            │ 2.0                   │
+├──────────────────┼───────────────────────┤
+│ perspective      │ 0.0                   │
+├──────────────────┼───────────────────────┤
+│ enable_mixup     │ False                 │
+├──────────────────┼───────────────────────┤
+│ warmup_epochs    │ 5                     │
+├──────────────────┼───────────────────────┤
+│ max_epoch        │ 35                    │
+├──────────────────┼───────────────────────┤
+│ warmup_lr        │ 0                     │
+├──────────────────┼───────────────────────┤
+│ basic_lr_per_img │ 0.00025               │
+├──────────────────┼───────────────────────┤
+│ scheduler        │ 'yoloxwarmcos'        │
+├──────────────────┼───────────────────────┤
+│ no_aug_epochs    │ 15                    │
+├──────────────────┼───────────────────────┤
+│ min_lr_ratio     │ 0.05                  │
+├──────────────────┼───────────────────────┤
+│ ema              │ True                  │
+├──────────────────┼───────────────────────┤
+│ weight_decay     │ 0.0005                │
+├──────────────────┼───────────────────────┤
+│ momentum         │ 0.9                   │
+├──────────────────┼───────────────────────┤
+│ exp_name         │ 'yolox_tiny_fish'     │
+├──────────────────┼───────────────────────┤
+│ test_size        │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ test_conf        │ 0.01                  │
+├──────────────────┼───────────────────────┤
+│ nmsthre          │ 0.65                  │
+├──────────────────┼───────────────────────┤
+│ input_scale      │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ random_size      │ (10, 20)              │
+╘══════════════════╧═══════════════════════╛
+2021-09-24 22:21:33.633 | INFO     | yolox.core.trainer:before_train:138 - Model Summary: Params: 5.03M, Gflops: 6.40
+2021-09-24 22:21:34.352 | INFO     | yolox.core.trainer:resume_train:291 - loading checkpoint for fine tuning
+2021-09-24 22:21:34.458 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.0.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:21:34.459 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.0.bias in model is torch.Size([6]).
+2021-09-24 22:21:34.460 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.1.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:21:34.460 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.1.bias in model is torch.Size([6]).
+2021-09-24 22:21:34.461 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.2.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:21:34.461 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.2.bias in model is torch.Size([6]).
+2021-09-24 22:21:35.332 | INFO     | yolox.data.datasets.coco:__init__:45 - loading annotations into memory...
+2021-09-24 22:21:35.336 | INFO     | yolox.data.datasets.coco:__init__:45 - Done (t=0.00s)
+2021-09-24 22:21:35.337 | INFO     | pycocotools.coco:__init__:88 - creating index...
+2021-09-24 22:21:35.338 | INFO     | pycocotools.coco:__init__:88 - index created!
+2021-09-24 22:21:35.412 | INFO     | yolox.core.trainer:before_train:156 - init prefetcher, this might take one minute or less...
+2021-09-24 22:22:04.741 | ERROR    | yolox.core.launch:launch:98 - An error has been caught in function 'launch', process 'MainProcess' (33020), thread 'MainThread' (15488):
+Traceback (most recent call last):
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2141, in <module>
+    main()
+    └ <function main at 0x000002365CB7A558>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2132, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+              │        │   │                          └ False
+              │        │   └ {'port': 7828, 'vm_type': None, 'client': '127.0.0.1', 'server': False, 'DEBUG_RECORD_SOCKET_READS': False, 'multiproc': True...
+              │        └ <function PyDB.run at 0x000002365CB77558>
+              └ <__main__.PyDB object at 0x0000023617F85A48>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1441, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+           │    │     │          │               │            │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+           │    │     │          │               └ None
+           │    │     │          └ ''
+           │    │     └ False
+           │    └ <function PyDB._exec at 0x000002365CB775E8>
+           └ <__main__.PyDB object at 0x0000023617F85A48>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1448, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+    │             │        │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+    │             └ <function execfile at 0x000002365AE7F8B8>
+    └ <module '_pydev_bundle.pydev_imports' from 'E:\\PYCHARM\\PyCharm 2020.2.3\\plugins\\python\\helpers\\pydev\\_pydev_bundle\\py...
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+                 │              │              │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              │              └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+                 └ '#!/usr/bin/env python3\n# -*- coding:utf-8 -*-\n# Copyright (c) Megvii, Inc. and its affiliates.\n\nimport argparse\nimport ...
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 133, in <module>
+    args=(exp, args),
+          │    └ Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=-1, dist_backend='nccl', dist_url=None, exp_fi...
+          └ ╒══════════════════╤═════════════════════════════════════════════════════════════════════════════════════════════════════════...
+
+> File "E:\clonegit项目\genshin_auto_fish\yolox\core\launch.py", line 98, in launch
+    main_func(*args)
+    │          └ (╒══════════════════╤════════════════════════════════════════════════════════════════════════════════════════════════════════...
+    └ <function main at 0x000002365CC973A8>
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 110, in main
+    trainer.train()
+    │       └ <function Trainer.train at 0x000002365FF5E288>
+    └ <yolox.core.trainer.Trainer object at 0x0000023662A9F548>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 73, in train
+    self.before_train()
+    │    └ <function Trainer.before_train at 0x0000023662A0D168>
+    └ <yolox.core.trainer.Trainer object at 0x0000023662A9F548>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 157, in before_train
+    self.prefetcher = DataPrefetcher(self.train_loader)
+    │                 │              │    └ <yolox.data.dataloading.DataLoader object at 0x00000236644540C8>
+    │                 │              └ <yolox.core.trainer.Trainer object at 0x0000023662A9F548>
+    │                 └ <class 'yolox.data.data_prefetcher.DataPrefetcher'>
+    └ <yolox.core.trainer.Trainer object at 0x0000023662A9F548>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\data\data_prefetcher.py", line 18, in __init__
+    self.stream = torch.cuda.Stream()
+    │             │     │    └ <class 'torch.cuda.streams.Stream'>
+    │             │     └ <module 'torch.cuda' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\cuda\\__init__.py'>
+    │             └ <module 'torch' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\__init__.py'>
+    └ <yolox.data.data_prefetcher.DataPrefetcher object at 0x0000023664A44E08>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\streams.py", line 32, in __new__
+    with torch.cuda.device(device):
+         │     │    │      └ None
+         │     │    └ <class 'torch.cuda.device'>
+         │     └ <module 'torch.cuda' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\cuda\\__init__.py'>
+         └ <module 'torch' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\__init__.py'>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\__init__.py", line 219, in __init__
+    self.idx = _get_device_index(device, optional=True)
+    │          │                 └ None
+    │          └ <function _get_device_index at 0x000002365F1189D8>
+    └ <torch.cuda.device object at 0x0000023665DB56C8>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\_utils.py", line 32, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           │                       │       │         └ False
+           │                       │       └ True
+           │                       └ None
+           └ <function _get_device_index at 0x000002365CD4F798>
+
+  File "E:\PYCHARM\lib\site-packages\torch\_utils.py", line 489, in _get_device_index
+    device_idx = _get_current_device_index()
+                 └ <function _get_current_device_index at 0x000002365CD4F5E8>
+
+  File "E:\PYCHARM\lib\site-packages\torch\_utils.py", line 448, in _get_current_device_index
+    return _get_device_attr(lambda m: m.current_device())
+           └ <function _get_device_attr at 0x000002365CD4F558>
+
+  File "E:\PYCHARM\lib\site-packages\torch\_utils.py", line 440, in _get_device_attr
+    if device_type.lower() == "cuda":
+       └ None
+
+AttributeError: 'NoneType' object has no attribute 'lower'
+2021-09-24 22:22:26.557 | INFO     | yolox.core.trainer:before_train:129 - args: Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=-1, dist_backend='nccl', dist_url=None, exp_file='../yolox/exp/yolox_tiny_fish.py', experiment_name='yolox_tiny_fish', fp16=False, machine_rank=0, name=None, num_machines=1, occupy=False, opts=[], resume=False, start_epoch=None)
+2021-09-24 22:22:26.573 | INFO     | yolox.core.trainer:before_train:130 - exp value:
+╒══════════════════╤═══════════════════════╕
+│ keys             │ values                │
+╞══════════════════╪═══════════════════════╡
+│ seed             │ None                  │
+├──────────────────┼───────────────────────┤
+│ output_dir       │ './YOLOX_outputs'     │
+├──────────────────┼───────────────────────┤
+│ print_interval   │ 10                    │
+├──────────────────┼───────────────────────┤
+│ eval_interval    │ 10                    │
+├──────────────────┼───────────────────────┤
+│ num_classes      │ 6                     │
+├──────────────────┼───────────────────────┤
+│ depth            │ 0.33                  │
+├──────────────────┼───────────────────────┤
+│ width            │ 0.375                 │
+├──────────────────┼───────────────────────┤
+│ data_num_workers │ 4                     │
+├──────────────────┼───────────────────────┤
+│ input_size       │ (640, 640)            │
+├──────────────────┼───────────────────────┤
+│ multiscale_range │ 5                     │
+├──────────────────┼───────────────────────┤
+│ data_dir         │ '../imgs/'            │
+├──────────────────┼───────────────────────┤
+│ data_name        │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ val_name         │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ train_ann        │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ val_ann          │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ mosaic_prob      │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ mixup_prob       │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ hsv_prob         │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ flip_prob        │ 0.5                   │
+├──────────────────┼───────────────────────┤
+│ degrees          │ 10.0                  │
+├──────────────────┼───────────────────────┤
+│ translate        │ 0.1                   │
+├──────────────────┼───────────────────────┤
+│ mosaic_scale     │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ mixup_scale      │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ shear            │ 2.0                   │
+├──────────────────┼───────────────────────┤
+│ perspective      │ 0.0                   │
+├──────────────────┼───────────────────────┤
+│ enable_mixup     │ False                 │
+├──────────────────┼───────────────────────┤
+│ warmup_epochs    │ 5                     │
+├──────────────────┼───────────────────────┤
+│ max_epoch        │ 35                    │
+├──────────────────┼───────────────────────┤
+│ warmup_lr        │ 0                     │
+├──────────────────┼───────────────────────┤
+│ basic_lr_per_img │ 0.00025               │
+├──────────────────┼───────────────────────┤
+│ scheduler        │ 'yoloxwarmcos'        │
+├──────────────────┼───────────────────────┤
+│ no_aug_epochs    │ 15                    │
+├──────────────────┼───────────────────────┤
+│ min_lr_ratio     │ 0.05                  │
+├──────────────────┼───────────────────────┤
+│ ema              │ True                  │
+├──────────────────┼───────────────────────┤
+│ weight_decay     │ 0.0005                │
+├──────────────────┼───────────────────────┤
+│ momentum         │ 0.9                   │
+├──────────────────┼───────────────────────┤
+│ exp_name         │ 'yolox_tiny_fish'     │
+├──────────────────┼───────────────────────┤
+│ test_size        │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ test_conf        │ 0.01                  │
+├──────────────────┼───────────────────────┤
+│ nmsthre          │ 0.65                  │
+├──────────────────┼───────────────────────┤
+│ input_scale      │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ random_size      │ (10, 20)              │
+╘══════════════════╧═══════════════════════╛
+2021-09-24 22:22:27.012 | INFO     | yolox.core.trainer:before_train:138 - Model Summary: Params: 5.03M, Gflops: 6.40
+2021-09-24 22:22:27.583 | INFO     | yolox.core.trainer:resume_train:291 - loading checkpoint for fine tuning
+2021-09-24 22:22:27.748 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.0.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:22:27.749 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.0.bias in model is torch.Size([6]).
+2021-09-24 22:22:27.750 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.1.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:22:27.751 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.1.bias in model is torch.Size([6]).
+2021-09-24 22:22:27.751 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.2.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:22:27.752 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.2.bias in model is torch.Size([6]).
+2021-09-24 22:22:28.002 | INFO     | yolox.data.datasets.coco:__init__:45 - loading annotations into memory...
+2021-09-24 22:22:28.009 | INFO     | yolox.data.datasets.coco:__init__:45 - Done (t=0.01s)
+2021-09-24 22:22:28.010 | INFO     | pycocotools.coco:__init__:88 - creating index...
+2021-09-24 22:22:28.011 | INFO     | pycocotools.coco:__init__:88 - index created!
+2021-09-24 22:22:28.107 | INFO     | yolox.core.trainer:before_train:156 - init prefetcher, this might take one minute or less...
+2021-09-24 22:23:40.421 | ERROR    | yolox.core.launch:launch:98 - An error has been caught in function 'launch', process 'MainProcess' (35552), thread 'MainThread' (37148):
+Traceback (most recent call last):
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2141, in <module>
+    main()
+    └ <function main at 0x000002664C8BB558>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2132, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+              │        │   │                          └ False
+              │        │   └ {'port': 3888, 'vm_type': None, 'client': '127.0.0.1', 'server': False, 'DEBUG_RECORD_SOCKET_READS': False, 'multiproc': True...
+              │        └ <function PyDB.run at 0x000002664C8B8558>
+              └ <__main__.PyDB object at 0x00000266420481C8>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1441, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+           │    │     │          │               │            │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+           │    │     │          │               └ None
+           │    │     │          └ ''
+           │    │     └ False
+           │    └ <function PyDB._exec at 0x000002664C8B85E8>
+           └ <__main__.PyDB object at 0x00000266420481C8>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1448, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+    │             │        │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+    │             └ <function execfile at 0x000002664ABBE8B8>
+    └ <module '_pydev_bundle.pydev_imports' from 'E:\\PYCHARM\\PyCharm 2020.2.3\\plugins\\python\\helpers\\pydev\\_pydev_bundle\\py...
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+                 │              │              │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              │              └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+                 └ '#!/usr/bin/env python3\n# -*- coding:utf-8 -*-\n# Copyright (c) Megvii, Inc. and its affiliates.\n\nimport argparse\nimport ...
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 133, in <module>
+    args=(exp, args),
+          │    └ Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=-1, dist_backend='nccl', dist_url=None, exp_fi...
+          └ ╒══════════════════╤═════════════════════════════════════════════════════════════════════════════════════════════════════════...
+
+> File "E:\clonegit项目\genshin_auto_fish\yolox\core\launch.py", line 98, in launch
+    main_func(*args)
+    │          └ (╒══════════════════╤════════════════════════════════════════════════════════════════════════════════════════════════════════...
+    └ <function main at 0x000002664C9F93A8>
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 110, in main
+    trainer.train()
+    │       └ <function Trainer.train at 0x000002664FC9E288>
+    └ <yolox.core.trainer.Trainer object at 0x00000266525B9F08>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 73, in train
+    self.before_train()
+    │    └ <function Trainer.before_train at 0x000002665274F168>
+    └ <yolox.core.trainer.Trainer object at 0x00000266525B9F08>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 157, in before_train
+    self.prefetcher = DataPrefetcher(self.train_loader)
+    │                 │              │    └ <yolox.data.dataloading.DataLoader object at 0x00000266541989C8>
+    │                 │              └ <yolox.core.trainer.Trainer object at 0x00000266525B9F08>
+    │                 └ <class 'yolox.data.data_prefetcher.DataPrefetcher'>
+    └ <yolox.core.trainer.Trainer object at 0x00000266525B9F08>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\data\data_prefetcher.py", line 18, in __init__
+    self.stream = torch.cuda.Stream()
+    │             │     │    └ <class 'torch.cuda.streams.Stream'>
+    │             │     └ <module 'torch.cuda' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\cuda\\__init__.py'>
+    │             └ <module 'torch' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\__init__.py'>
+    └ <yolox.data.data_prefetcher.DataPrefetcher object at 0x000002665417A708>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\streams.py", line 32, in __new__
+    with torch.cuda.device(device):
+         │     │    │      └ None
+         │     │    └ <class 'torch.cuda.device'>
+         │     └ <module 'torch.cuda' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\cuda\\__init__.py'>
+         └ <module 'torch' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\__init__.py'>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\__init__.py", line 219, in __init__
+    self.idx = _get_device_index(device, optional=True)
+    │          │                 └ None
+    │          └ <function _get_device_index at 0x000002664EE589D8>
+    └ <torch.cuda.device object at 0x00000266541E4048>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\_utils.py", line 32, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           │                       │       │         └ False
+           │                       │       └ True
+           │                       └ None
+           └ <function _get_device_index at 0x000002664CAAF798>
+
+  File "E:\PYCHARM\lib\site-packages\torch\_utils.py", line 489, in _get_device_index
+    device_idx = _get_current_device_index()
+                 └ <function _get_current_device_index at 0x000002664CAAF5E8>
+
+  File "E:\PYCHARM\lib\site-packages\torch\_utils.py", line 448, in _get_current_device_index
+    return _get_device_attr(lambda m: m.current_device())
+           └ <function _get_device_attr at 0x000002664CAAF558>
+
+  File "E:\PYCHARM\lib\site-packages\torch\_utils.py", line 440, in _get_device_attr
+    if device_type.lower() == "cuda":
+       └ None
+
+AttributeError: 'NoneType' object has no attribute 'lower'
+2021-09-24 22:25:57.454 | INFO     | yolox.core.trainer:before_train:129 - args: Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=-1, dist_backend='nccl', dist_url=None, exp_file='../yolox/exp/yolox_tiny_fish.py', experiment_name='yolox_tiny_fish', fp16=False, machine_rank=0, name=None, num_machines=1, occupy=False, opts=[], resume=False, start_epoch=None)
+2021-09-24 22:25:57.472 | INFO     | yolox.core.trainer:before_train:130 - exp value:
+╒══════════════════╤═══════════════════════╕
+│ keys             │ values                │
+╞══════════════════╪═══════════════════════╡
+│ seed             │ None                  │
+├──────────────────┼───────────────────────┤
+│ output_dir       │ './YOLOX_outputs'     │
+├──────────────────┼───────────────────────┤
+│ print_interval   │ 10                    │
+├──────────────────┼───────────────────────┤
+│ eval_interval    │ 10                    │
+├──────────────────┼───────────────────────┤
+│ num_classes      │ 6                     │
+├──────────────────┼───────────────────────┤
+│ depth            │ 0.33                  │
+├──────────────────┼───────────────────────┤
+│ width            │ 0.375                 │
+├──────────────────┼───────────────────────┤
+│ data_num_workers │ 4                     │
+├──────────────────┼───────────────────────┤
+│ input_size       │ (640, 640)            │
+├──────────────────┼───────────────────────┤
+│ multiscale_range │ 5                     │
+├──────────────────┼───────────────────────┤
+│ data_dir         │ '../imgs/'            │
+├──────────────────┼───────────────────────┤
+│ data_name        │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ val_name         │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ train_ann        │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ val_ann          │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ mosaic_prob      │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ mixup_prob       │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ hsv_prob         │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ flip_prob        │ 0.5                   │
+├──────────────────┼───────────────────────┤
+│ degrees          │ 10.0                  │
+├──────────────────┼───────────────────────┤
+│ translate        │ 0.1                   │
+├──────────────────┼───────────────────────┤
+│ mosaic_scale     │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ mixup_scale      │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ shear            │ 2.0                   │
+├──────────────────┼───────────────────────┤
+│ perspective      │ 0.0                   │
+├──────────────────┼───────────────────────┤
+│ enable_mixup     │ False                 │
+├──────────────────┼───────────────────────┤
+│ warmup_epochs    │ 5                     │
+├──────────────────┼───────────────────────┤
+│ max_epoch        │ 35                    │
+├──────────────────┼───────────────────────┤
+│ warmup_lr        │ 0                     │
+├──────────────────┼───────────────────────┤
+│ basic_lr_per_img │ 0.00025               │
+├──────────────────┼───────────────────────┤
+│ scheduler        │ 'yoloxwarmcos'        │
+├──────────────────┼───────────────────────┤
+│ no_aug_epochs    │ 15                    │
+├──────────────────┼───────────────────────┤
+│ min_lr_ratio     │ 0.05                  │
+├──────────────────┼───────────────────────┤
+│ ema              │ True                  │
+├──────────────────┼───────────────────────┤
+│ weight_decay     │ 0.0005                │
+├──────────────────┼───────────────────────┤
+│ momentum         │ 0.9                   │
+├──────────────────┼───────────────────────┤
+│ exp_name         │ 'yolox_tiny_fish'     │
+├──────────────────┼───────────────────────┤
+│ test_size        │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ test_conf        │ 0.01                  │
+├──────────────────┼───────────────────────┤
+│ nmsthre          │ 0.65                  │
+├──────────────────┼───────────────────────┤
+│ input_scale      │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ random_size      │ (10, 20)              │
+╘══════════════════╧═══════════════════════╛
+2021-09-24 22:25:57.935 | INFO     | yolox.core.trainer:before_train:138 - Model Summary: Params: 5.03M, Gflops: 6.40
+2021-09-24 22:25:58.471 | INFO     | yolox.core.trainer:resume_train:291 - loading checkpoint for fine tuning
+2021-09-24 22:25:58.629 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.0.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:25:58.630 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.0.bias in model is torch.Size([6]).
+2021-09-24 22:25:58.631 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.1.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:25:58.632 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.1.bias in model is torch.Size([6]).
+2021-09-24 22:25:58.632 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.2.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:25:58.633 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.2.bias in model is torch.Size([6]).
+2021-09-24 22:25:58.974 | INFO     | yolox.data.datasets.coco:__init__:45 - loading annotations into memory...
+2021-09-24 22:25:58.978 | INFO     | yolox.data.datasets.coco:__init__:45 - Done (t=0.00s)
+2021-09-24 22:25:58.979 | INFO     | pycocotools.coco:__init__:88 - creating index...
+2021-09-24 22:25:58.980 | INFO     | pycocotools.coco:__init__:88 - index created!
+2021-09-24 22:25:59.071 | INFO     | yolox.core.trainer:before_train:156 - init prefetcher, this might take one minute or less...
+2021-09-24 22:26:16.006 | ERROR    | yolox.core.launch:launch:98 - An error has been caught in function 'launch', process 'MainProcess' (34868), thread 'MainThread' (24148):
+Traceback (most recent call last):
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2141, in <module>
+    main()
+    └ <function main at 0x00000208C50CA558>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2132, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+              │        │   │                          └ False
+              │        │   └ {'port': 12667, 'vm_type': None, 'client': '127.0.0.1', 'server': False, 'DEBUG_RECORD_SOCKET_READS': False, 'multiproc': Tru...
+              │        └ <function PyDB.run at 0x00000208C50C7558>
+              └ <__main__.PyDB object at 0x0000020880825A48>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1441, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+           │    │     │          │               │            │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+           │    │     │          │               └ None
+           │    │     │          └ ''
+           │    │     └ False
+           │    └ <function PyDB._exec at 0x00000208C50C75E8>
+           └ <__main__.PyDB object at 0x0000020880825A48>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1448, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+    │             │        │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+    │             └ <function execfile at 0x00000208C33CE8B8>
+    └ <module '_pydev_bundle.pydev_imports' from 'E:\\PYCHARM\\PyCharm 2020.2.3\\plugins\\python\\helpers\\pydev\\_pydev_bundle\\py...
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+                 │              │              │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              │              └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+                 └ '#!/usr/bin/env python3\n# -*- coding:utf-8 -*-\n# Copyright (c) Megvii, Inc. and its affiliates.\n\nimport argparse\nimport ...
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 133, in <module>
+    args=(exp, args),
+          │    └ Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=-1, dist_backend='nccl', dist_url=None, exp_fi...
+          └ ╒══════════════════╤═════════════════════════════════════════════════════════════════════════════════════════════════════════...
+
+> File "E:\clonegit项目\genshin_auto_fish\yolox\core\launch.py", line 98, in launch
+    main_func(*args)
+    │          └ (╒══════════════════╤════════════════════════════════════════════════════════════════════════════════════════════════════════...
+    └ <function main at 0x00000208C51E73A8>
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 110, in main
+    trainer.train()
+    │       └ <function Trainer.train at 0x00000208C84AC288>
+    └ <yolox.core.trainer.Trainer object at 0x00000208CAFB0A08>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 73, in train
+    self.before_train()
+    │    └ <function Trainer.before_train at 0x00000208CAF5D168>
+    └ <yolox.core.trainer.Trainer object at 0x00000208CAFB0A08>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 157, in before_train
+    self.prefetcher = DataPrefetcher(self.train_loader)
+    │                 │              │    └ <yolox.data.dataloading.DataLoader object at 0x00000208CC9F6108>
+    │                 │              └ <yolox.core.trainer.Trainer object at 0x00000208CAFB0A08>
+    │                 └ <class 'yolox.data.data_prefetcher.DataPrefetcher'>
+    └ <yolox.core.trainer.Trainer object at 0x00000208CAFB0A08>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\data\data_prefetcher.py", line 18, in __init__
+    self.stream = torch.cuda.Stream()
+    │             │     │    └ <class 'torch.cuda.streams.Stream'>
+    │             │     └ <module 'torch.cuda' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\cuda\\__init__.py'>
+    │             └ <module 'torch' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\__init__.py'>
+    └ <yolox.data.data_prefetcher.DataPrefetcher object at 0x00000208CC9F6548>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\streams.py", line 32, in __new__
+    with torch.cuda.device(device):
+         │     │    │      └ None
+         │     │    └ <class 'torch.cuda.device'>
+         │     └ <module 'torch.cuda' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\cuda\\__init__.py'>
+         └ <module 'torch' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\__init__.py'>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\__init__.py", line 219, in __init__
+    self.idx = _get_device_index(device, optional=True)
+    │          │                 └ None
+    │          └ <function _get_device_index at 0x00000208C76689D8>
+    └ <torch.cuda.device object at 0x00000208CCA20CC8>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\_utils.py", line 32, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           │                       │       │         └ False
+           │                       │       └ True
+           │                       └ None
+           └ <function _get_device_index at 0x00000208C529F798>
+
+  File "E:\PYCHARM\lib\site-packages\torch\_utils.py", line 489, in _get_device_index
+    device_idx = _get_current_device_index()
+                 └ <function _get_current_device_index at 0x00000208C529F5E8>
+
+  File "E:\PYCHARM\lib\site-packages\torch\_utils.py", line 448, in _get_current_device_index
+    return _get_device_attr(lambda m: m.current_device())
+           └ <function _get_device_attr at 0x00000208C529F558>
+
+  File "E:\PYCHARM\lib\site-packages\torch\_utils.py", line 440, in _get_device_attr
+    if device_type.lower() == "cuda":
+       └ None
+
+AttributeError: 'NoneType' object has no attribute 'lower'
+2021-09-24 22:29:21.776 | INFO     | yolox.core.trainer:before_train:129 - args: Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=1, dist_backend='nccl', dist_url=None, exp_file='../yolox/exp/yolox_tiny_fish.py', experiment_name='yolox_tiny_fish', fp16=False, machine_rank=0, name=None, num_machines=1, occupy=False, opts=[], resume=False, start_epoch=None)
+2021-09-24 22:29:21.794 | INFO     | yolox.core.trainer:before_train:130 - exp value:
+╒══════════════════╤═══════════════════════╕
+│ keys             │ values                │
+╞══════════════════╪═══════════════════════╡
+│ seed             │ None                  │
+├──────────────────┼───────────────────────┤
+│ output_dir       │ './YOLOX_outputs'     │
+├──────────────────┼───────────────────────┤
+│ print_interval   │ 10                    │
+├──────────────────┼───────────────────────┤
+│ eval_interval    │ 10                    │
+├──────────────────┼───────────────────────┤
+│ num_classes      │ 6                     │
+├──────────────────┼───────────────────────┤
+│ depth            │ 0.33                  │
+├──────────────────┼───────────────────────┤
+│ width            │ 0.375                 │
+├──────────────────┼───────────────────────┤
+│ data_num_workers │ 4                     │
+├──────────────────┼───────────────────────┤
+│ input_size       │ (640, 640)            │
+├──────────────────┼───────────────────────┤
+│ multiscale_range │ 5                     │
+├──────────────────┼───────────────────────┤
+│ data_dir         │ '../imgs/'            │
+├──────────────────┼───────────────────────┤
+│ data_name        │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ val_name         │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ train_ann        │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ val_ann          │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ mosaic_prob      │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ mixup_prob       │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ hsv_prob         │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ flip_prob        │ 0.5                   │
+├──────────────────┼───────────────────────┤
+│ degrees          │ 10.0                  │
+├──────────────────┼───────────────────────┤
+│ translate        │ 0.1                   │
+├──────────────────┼───────────────────────┤
+│ mosaic_scale     │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ mixup_scale      │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ shear            │ 2.0                   │
+├──────────────────┼───────────────────────┤
+│ perspective      │ 0.0                   │
+├──────────────────┼───────────────────────┤
+│ enable_mixup     │ False                 │
+├──────────────────┼───────────────────────┤
+│ warmup_epochs    │ 5                     │
+├──────────────────┼───────────────────────┤
+│ max_epoch        │ 35                    │
+├──────────────────┼───────────────────────┤
+│ warmup_lr        │ 0                     │
+├──────────────────┼───────────────────────┤
+│ basic_lr_per_img │ 0.00025               │
+├──────────────────┼───────────────────────┤
+│ scheduler        │ 'yoloxwarmcos'        │
+├──────────────────┼───────────────────────┤
+│ no_aug_epochs    │ 15                    │
+├──────────────────┼───────────────────────┤
+│ min_lr_ratio     │ 0.05                  │
+├──────────────────┼───────────────────────┤
+│ ema              │ True                  │
+├──────────────────┼───────────────────────┤
+│ weight_decay     │ 0.0005                │
+├──────────────────┼───────────────────────┤
+│ momentum         │ 0.9                   │
+├──────────────────┼───────────────────────┤
+│ exp_name         │ 'yolox_tiny_fish'     │
+├──────────────────┼───────────────────────┤
+│ test_size        │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ test_conf        │ 0.01                  │
+├──────────────────┼───────────────────────┤
+│ nmsthre          │ 0.65                  │
+├──────────────────┼───────────────────────┤
+│ input_scale      │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ random_size      │ (10, 20)              │
+╘══════════════════╧═══════════════════════╛
+2021-09-24 22:29:22.186 | INFO     | yolox.core.trainer:before_train:138 - Model Summary: Params: 5.03M, Gflops: 6.40
+2021-09-24 22:29:22.952 | INFO     | yolox.core.trainer:resume_train:291 - loading checkpoint for fine tuning
+2021-09-24 22:29:23.058 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.0.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:29:23.059 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.0.bias in model is torch.Size([6]).
+2021-09-24 22:29:23.059 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.1.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:29:23.060 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.1.bias in model is torch.Size([6]).
+2021-09-24 22:29:23.060 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.2.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:29:23.060 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.2.bias in model is torch.Size([6]).
+2021-09-24 22:29:23.680 | INFO     | yolox.data.datasets.coco:__init__:45 - loading annotations into memory...
+2021-09-24 22:29:23.684 | INFO     | yolox.data.datasets.coco:__init__:45 - Done (t=0.00s)
+2021-09-24 22:29:23.684 | INFO     | pycocotools.coco:__init__:88 - creating index...
+2021-09-24 22:29:23.685 | INFO     | pycocotools.coco:__init__:88 - index created!
+2021-09-24 22:29:23.759 | INFO     | yolox.core.trainer:before_train:156 - init prefetcher, this might take one minute or less...
+2021-09-24 22:29:45.988 | ERROR    | yolox.core.launch:launch:98 - An error has been caught in function 'launch', process 'MainProcess' (33292), thread 'MainThread' (18068):
+Traceback (most recent call last):
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2141, in <module>
+    main()
+    └ <function main at 0x0000017A5ADBB558>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2132, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+              │        │   │                          └ False
+              │        │   └ {'port': 6198, 'vm_type': None, 'client': '127.0.0.1', 'server': False, 'DEBUG_RECORD_SOCKET_READS': False, 'multiproc': True...
+              │        └ <function PyDB.run at 0x0000017A5ADB8558>
+              └ <__main__.PyDB object at 0x0000017A161C5A48>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1441, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+           │    │     │          │               │            │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+           │    │     │          │               └ None
+           │    │     │          └ ''
+           │    │     └ False
+           │    └ <function PyDB._exec at 0x0000017A5ADB85E8>
+           └ <__main__.PyDB object at 0x0000017A161C5A48>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1448, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+    │             │        │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+    │             └ <function execfile at 0x0000017A590BF8B8>
+    └ <module '_pydev_bundle.pydev_imports' from 'E:\\PYCHARM\\PyCharm 2020.2.3\\plugins\\python\\helpers\\pydev\\_pydev_bundle\\py...
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+                 │              │              │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              │              └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+                 └ '#!/usr/bin/env python3\n# -*- coding:utf-8 -*-\n# Copyright (c) Megvii, Inc. and its affiliates.\n\nimport argparse\nimport ...
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 133, in <module>
+    args=(exp, args),
+          │    └ Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=1, dist_backend='nccl', dist_url=None, exp_fil...
+          └ ╒══════════════════╤═════════════════════════════════════════════════════════════════════════════════════════════════════════...
+
+> File "E:\clonegit项目\genshin_auto_fish\yolox\core\launch.py", line 98, in launch
+    main_func(*args)
+    │          └ (╒══════════════════╤════════════════════════════════════════════════════════════════════════════════════════════════════════...
+    └ <function main at 0x0000017A5AED64C8>
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 110, in main
+    trainer.train()
+    │       └ <function Trainer.train at 0x0000017A5E19E3A8>
+    └ <yolox.core.trainer.Trainer object at 0x0000017A5AEB5D08>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 73, in train
+    self.before_train()
+    │    └ <function Trainer.before_train at 0x0000017A60C5E288>
+    └ <yolox.core.trainer.Trainer object at 0x0000017A5AEB5D08>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 157, in before_train
+    self.prefetcher = DataPrefetcher(self.train_loader)
+    │                 │              │    └ <yolox.data.dataloading.DataLoader object at 0x0000017A626C2348>
+    │                 │              └ <yolox.core.trainer.Trainer object at 0x0000017A5AEB5D08>
+    │                 └ <class 'yolox.data.data_prefetcher.DataPrefetcher'>
+    └ <yolox.core.trainer.Trainer object at 0x0000017A5AEB5D08>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\data\data_prefetcher.py", line 18, in __init__
+    self.stream = torch.cuda.Stream()
+    │             │     │    └ <class 'torch.cuda.streams.Stream'>
+    │             │     └ <module 'torch.cuda' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\cuda\\__init__.py'>
+    │             └ <module 'torch' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\__init__.py'>
+    └ <yolox.data.data_prefetcher.DataPrefetcher object at 0x0000017A5FFB8448>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\streams.py", line 32, in __new__
+    with torch.cuda.device(device):
+         │     │    │      └ None
+         │     │    └ <class 'torch.cuda.device'>
+         │     └ <module 'torch.cuda' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\cuda\\__init__.py'>
+         └ <module 'torch' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\__init__.py'>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\__init__.py", line 219, in __init__
+    self.idx = _get_device_index(device, optional=True)
+    │          │                 └ None
+    │          └ <function _get_device_index at 0x0000017A5D358AF8>
+    └ <torch.cuda.device object at 0x0000017A62C914C8>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\_utils.py", line 32, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           │                       │       │         └ False
+           │                       │       └ True
+           │                       └ None
+           └ <function _get_device_index at 0x0000017A5AF8F8B8>
+
+  File "E:\PYCHARM\lib\site-packages\torch\_utils.py", line 489, in _get_device_index
+    device_idx = _get_current_device_index()
+                 └ <function _get_current_device_index at 0x0000017A5AF8F708>
+
+  File "E:\PYCHARM\lib\site-packages\torch\_utils.py", line 448, in _get_current_device_index
+    return _get_device_attr(lambda m: m.current_device())
+           └ <function _get_device_attr at 0x0000017A5AF8F678>
+
+  File "E:\PYCHARM\lib\site-packages\torch\_utils.py", line 440, in _get_device_attr
+    if device_type.lower() == "cuda":
+       └ None
+
+AttributeError: 'NoneType' object has no attribute 'lower'
+2021-09-24 22:30:45.497 | INFO     | yolox.core.trainer:before_train:129 - args: Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=1, dist_backend='nccl', dist_url=None, exp_file='../yolox/exp/yolox_tiny_fish.py', experiment_name='yolox_tiny_fish', fp16=False, machine_rank=0, name=None, num_machines=1, occupy=False, opts=[], resume=False, start_epoch=None)
+2021-09-24 22:30:45.514 | INFO     | yolox.core.trainer:before_train:130 - exp value:
+╒══════════════════╤═══════════════════════╕
+│ keys             │ values                │
+╞══════════════════╪═══════════════════════╡
+│ seed             │ None                  │
+├──────────────────┼───────────────────────┤
+│ output_dir       │ './YOLOX_outputs'     │
+├──────────────────┼───────────────────────┤
+│ print_interval   │ 10                    │
+├──────────────────┼───────────────────────┤
+│ eval_interval    │ 10                    │
+├──────────────────┼───────────────────────┤
+│ num_classes      │ 6                     │
+├──────────────────┼───────────────────────┤
+│ depth            │ 0.33                  │
+├──────────────────┼───────────────────────┤
+│ width            │ 0.375                 │
+├──────────────────┼───────────────────────┤
+│ data_num_workers │ 4                     │
+├──────────────────┼───────────────────────┤
+│ input_size       │ (640, 640)            │
+├──────────────────┼───────────────────────┤
+│ multiscale_range │ 5                     │
+├──────────────────┼───────────────────────┤
+│ data_dir         │ '../imgs/'            │
+├──────────────────┼───────────────────────┤
+│ data_name        │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ val_name         │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ train_ann        │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ val_ann          │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ mosaic_prob      │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ mixup_prob       │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ hsv_prob         │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ flip_prob        │ 0.5                   │
+├──────────────────┼───────────────────────┤
+│ degrees          │ 10.0                  │
+├──────────────────┼───────────────────────┤
+│ translate        │ 0.1                   │
+├──────────────────┼───────────────────────┤
+│ mosaic_scale     │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ mixup_scale      │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ shear            │ 2.0                   │
+├──────────────────┼───────────────────────┤
+│ perspective      │ 0.0                   │
+├──────────────────┼───────────────────────┤
+│ enable_mixup     │ False                 │
+├──────────────────┼───────────────────────┤
+│ warmup_epochs    │ 5                     │
+├──────────────────┼───────────────────────┤
+│ max_epoch        │ 35                    │
+├──────────────────┼───────────────────────┤
+│ warmup_lr        │ 0                     │
+├──────────────────┼───────────────────────┤
+│ basic_lr_per_img │ 0.00025               │
+├──────────────────┼───────────────────────┤
+│ scheduler        │ 'yoloxwarmcos'        │
+├──────────────────┼───────────────────────┤
+│ no_aug_epochs    │ 15                    │
+├──────────────────┼───────────────────────┤
+│ min_lr_ratio     │ 0.05                  │
+├──────────────────┼───────────────────────┤
+│ ema              │ True                  │
+├──────────────────┼───────────────────────┤
+│ weight_decay     │ 0.0005                │
+├──────────────────┼───────────────────────┤
+│ momentum         │ 0.9                   │
+├──────────────────┼───────────────────────┤
+│ exp_name         │ 'yolox_tiny_fish'     │
+├──────────────────┼───────────────────────┤
+│ test_size        │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ test_conf        │ 0.01                  │
+├──────────────────┼───────────────────────┤
+│ nmsthre          │ 0.65                  │
+├──────────────────┼───────────────────────┤
+│ input_scale      │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ random_size      │ (10, 20)              │
+╘══════════════════╧═══════════════════════╛
+2021-09-24 22:30:45.874 | INFO     | yolox.core.trainer:before_train:138 - Model Summary: Params: 5.03M, Gflops: 6.40
+2021-09-24 22:30:46.910 | INFO     | yolox.core.trainer:resume_train:291 - loading checkpoint for fine tuning
+2021-09-24 22:30:47.016 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.0.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:30:47.016 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.0.bias in model is torch.Size([6]).
+2021-09-24 22:30:47.017 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.1.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:30:47.017 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.1.bias in model is torch.Size([6]).
+2021-09-24 22:30:47.018 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.2.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:30:47.018 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.2.bias in model is torch.Size([6]).
+2021-09-24 22:30:47.748 | INFO     | yolox.data.datasets.coco:__init__:45 - loading annotations into memory...
+2021-09-24 22:30:47.752 | INFO     | yolox.data.datasets.coco:__init__:45 - Done (t=0.00s)
+2021-09-24 22:30:47.752 | INFO     | pycocotools.coco:__init__:88 - creating index...
+2021-09-24 22:30:47.753 | INFO     | pycocotools.coco:__init__:88 - index created!
+2021-09-24 22:30:47.823 | INFO     | yolox.core.trainer:before_train:156 - init prefetcher, this might take one minute or less...
+2021-09-24 22:31:01.702 | ERROR    | yolox.core.launch:launch:98 - An error has been caught in function 'launch', process 'MainProcess' (29628), thread 'MainThread' (30048):
+Traceback (most recent call last):
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2141, in <module>
+    main()
+    └ <function main at 0x00000275FDB3A558>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2132, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+              │        │   │                          └ False
+              │        │   └ {'port': 6027, 'vm_type': None, 'client': '127.0.0.1', 'server': False, 'DEBUG_RECORD_SOCKET_READS': False, 'multiproc': True...
+              │        └ <function PyDB.run at 0x00000275FDB37558>
+              └ <__main__.PyDB object at 0x00000275E9285A48>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1441, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+           │    │     │          │               │            │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+           │    │     │          │               └ None
+           │    │     │          └ ''
+           │    │     └ False
+           │    └ <function PyDB._exec at 0x00000275FDB375E8>
+           └ <__main__.PyDB object at 0x00000275E9285A48>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1448, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+    │             │        │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+    │             └ <function execfile at 0x00000275FBE3F8B8>
+    └ <module '_pydev_bundle.pydev_imports' from 'E:\\PYCHARM\\PyCharm 2020.2.3\\plugins\\python\\helpers\\pydev\\_pydev_bundle\\py...
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+                 │              │              │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              │              └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+                 └ '#!/usr/bin/env python3\n# -*- coding:utf-8 -*-\n# Copyright (c) Megvii, Inc. and its affiliates.\n\nimport argparse\nimport ...
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 133, in <module>
+    args=(exp, args),
+          │    └ Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=1, dist_backend='nccl', dist_url=None, exp_fil...
+          └ ╒══════════════════╤═════════════════════════════════════════════════════════════════════════════════════════════════════════...
+
+> File "E:\clonegit项目\genshin_auto_fish\yolox\core\launch.py", line 98, in launch
+    main_func(*args)
+    │          └ (╒══════════════════╤════════════════════════════════════════════════════════════════════════════════════════════════════════...
+    └ <function main at 0x00000275FDC5A4C8>
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 110, in main
+    trainer.train()
+    │       └ <function Trainer.train at 0x00000275B109A3A8>
+    └ <yolox.core.trainer.Trainer object at 0x00000275B2B697C8>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 73, in train
+    self.before_train()
+    │    └ <function Trainer.before_train at 0x00000275B3B5F288>
+    └ <yolox.core.trainer.Trainer object at 0x00000275B2B697C8>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 157, in before_train
+    self.prefetcher = DataPrefetcher(self.train_loader)
+    │                 │              │    └ <yolox.data.dataloading.DataLoader object at 0x00000275B3D2B188>
+    │                 │              └ <yolox.core.trainer.Trainer object at 0x00000275B2B697C8>
+    │                 └ <class 'yolox.data.data_prefetcher.DataPrefetcher'>
+    └ <yolox.core.trainer.Trainer object at 0x00000275B2B697C8>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\data\data_prefetcher.py", line 18, in __init__
+    self.stream = torch.cuda.Stream()
+    │             │     │    └ <class 'torch.cuda.streams.Stream'>
+    │             │     └ <module 'torch.cuda' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\cuda\\__init__.py'>
+    │             └ <module 'torch' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\__init__.py'>
+    └ <yolox.data.data_prefetcher.DataPrefetcher object at 0x00000275B5EAA088>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\streams.py", line 32, in __new__
+    with torch.cuda.device(device):
+         │     │    │      └ None
+         │     │    └ <class 'torch.cuda.device'>
+         │     └ <module 'torch.cuda' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\cuda\\__init__.py'>
+         └ <module 'torch' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\__init__.py'>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\__init__.py", line 219, in __init__
+    self.idx = _get_device_index(device, optional=True)
+    │          │                 └ None
+    │          └ <function _get_device_index at 0x00000275FFEDAAF8>
+    └ <torch.cuda.device object at 0x00000275B6ED67C8>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\_utils.py", line 32, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           │                       │       │         └ False
+           │                       │       └ True
+           │                       └ None
+           └ <function _get_device_index at 0x00000275FDD0F798>
+
+  File "E:\PYCHARM\lib\site-packages\torch\_utils.py", line 489, in _get_device_index
+    device_idx = _get_current_device_index()
+                 └ <function _get_current_device_index at 0x00000275FDD0F5E8>
+
+  File "E:\PYCHARM\lib\site-packages\torch\_utils.py", line 448, in _get_current_device_index
+    return _get_device_attr(lambda m: m.current_device())
+           └ <function _get_device_attr at 0x00000275FDD0F558>
+
+  File "E:\PYCHARM\lib\site-packages\torch\_utils.py", line 440, in _get_device_attr
+    if device_type.lower() == "cuda":
+       └ None
+
+AttributeError: 'NoneType' object has no attribute 'lower'
+2021-09-24 22:35:36.130 | INFO     | yolox.core.trainer:before_train:129 - args: Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=1, dist_backend='nccl', dist_url=None, exp_file='../yolox/exp/yolox_tiny_fish.py', experiment_name='yolox_tiny_fish', fp16=False, machine_rank=0, name=None, num_machines=1, occupy=False, opts=[], resume=False, start_epoch=None)
+2021-09-24 22:35:36.150 | INFO     | yolox.core.trainer:before_train:130 - exp value:
+╒══════════════════╤═══════════════════════╕
+│ keys             │ values                │
+╞══════════════════╪═══════════════════════╡
+│ seed             │ None                  │
+├──────────────────┼───────────────────────┤
+│ output_dir       │ './YOLOX_outputs'     │
+├──────────────────┼───────────────────────┤
+│ print_interval   │ 10                    │
+├──────────────────┼───────────────────────┤
+│ eval_interval    │ 10                    │
+├──────────────────┼───────────────────────┤
+│ num_classes      │ 6                     │
+├──────────────────┼───────────────────────┤
+│ depth            │ 0.33                  │
+├──────────────────┼───────────────────────┤
+│ width            │ 0.375                 │
+├──────────────────┼───────────────────────┤
+│ data_num_workers │ 4                     │
+├──────────────────┼───────────────────────┤
+│ input_size       │ (640, 640)            │
+├──────────────────┼───────────────────────┤
+│ multiscale_range │ 5                     │
+├──────────────────┼───────────────────────┤
+│ data_dir         │ '../imgs/'            │
+├──────────────────┼───────────────────────┤
+│ data_name        │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ val_name         │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ train_ann        │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ val_ann          │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ mosaic_prob      │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ mixup_prob       │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ hsv_prob         │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ flip_prob        │ 0.5                   │
+├──────────────────┼───────────────────────┤
+│ degrees          │ 10.0                  │
+├──────────────────┼───────────────────────┤
+│ translate        │ 0.1                   │
+├──────────────────┼───────────────────────┤
+│ mosaic_scale     │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ mixup_scale      │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ shear            │ 2.0                   │
+├──────────────────┼───────────────────────┤
+│ perspective      │ 0.0                   │
+├──────────────────┼───────────────────────┤
+│ enable_mixup     │ False                 │
+├──────────────────┼───────────────────────┤
+│ warmup_epochs    │ 5                     │
+├──────────────────┼───────────────────────┤
+│ max_epoch        │ 35                    │
+├──────────────────┼───────────────────────┤
+│ warmup_lr        │ 0                     │
+├──────────────────┼───────────────────────┤
+│ basic_lr_per_img │ 0.00025               │
+├──────────────────┼───────────────────────┤
+│ scheduler        │ 'yoloxwarmcos'        │
+├──────────────────┼───────────────────────┤
+│ no_aug_epochs    │ 15                    │
+├──────────────────┼───────────────────────┤
+│ min_lr_ratio     │ 0.05                  │
+├──────────────────┼───────────────────────┤
+│ ema              │ True                  │
+├──────────────────┼───────────────────────┤
+│ weight_decay     │ 0.0005                │
+├──────────────────┼───────────────────────┤
+│ momentum         │ 0.9                   │
+├──────────────────┼───────────────────────┤
+│ exp_name         │ 'yolox_tiny_fish'     │
+├──────────────────┼───────────────────────┤
+│ test_size        │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ test_conf        │ 0.01                  │
+├──────────────────┼───────────────────────┤
+│ nmsthre          │ 0.65                  │
+├──────────────────┼───────────────────────┤
+│ input_scale      │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ random_size      │ (10, 20)              │
+╘══════════════════╧═══════════════════════╛
+2021-09-24 22:35:36.537 | INFO     | yolox.core.trainer:before_train:138 - Model Summary: Params: 5.03M, Gflops: 6.40
+2021-09-24 22:35:37.408 | INFO     | yolox.core.trainer:resume_train:291 - loading checkpoint for fine tuning
+2021-09-24 22:35:37.538 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.0.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:35:37.539 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.0.bias in model is torch.Size([6]).
+2021-09-24 22:35:37.540 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.1.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:35:37.540 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.1.bias in model is torch.Size([6]).
+2021-09-24 22:35:37.540 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.2.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-24 22:35:37.541 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.2.bias in model is torch.Size([6]).
+2021-09-24 22:35:38.210 | INFO     | yolox.data.datasets.coco:__init__:45 - loading annotations into memory...
+2021-09-24 22:35:38.214 | INFO     | yolox.data.datasets.coco:__init__:45 - Done (t=0.00s)
+2021-09-24 22:35:38.215 | INFO     | pycocotools.coco:__init__:88 - creating index...
+2021-09-24 22:35:38.216 | INFO     | pycocotools.coco:__init__:88 - index created!
+2021-09-24 22:35:38.287 | INFO     | yolox.core.trainer:before_train:156 - init prefetcher, this might take one minute or less...
+2021-09-24 22:35:51.964 | ERROR    | yolox.core.launch:launch:98 - An error has been caught in function 'launch', process 'MainProcess' (33884), thread 'MainThread' (2344):
+Traceback (most recent call last):
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2141, in <module>
+    main()
+    └ <function main at 0x0000020CDA5EB558>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2132, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+              │        │   │                          └ False
+              │        │   └ {'port': 11657, 'vm_type': None, 'client': '127.0.0.1', 'server': False, 'DEBUG_RECORD_SOCKET_READS': False, 'multiproc': Tru...
+              │        └ <function PyDB.run at 0x0000020CDA5E8558>
+              └ <__main__.PyDB object at 0x0000020C95D45A48>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1441, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+           │    │     │          │               │            │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+           │    │     │          │               └ None
+           │    │     │          └ ''
+           │    │     └ False
+           │    └ <function PyDB._exec at 0x0000020CDA5E85E8>
+           └ <__main__.PyDB object at 0x0000020C95D45A48>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1448, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+    │             │        │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+    │             └ <function execfile at 0x0000020CD88EE8B8>
+    └ <module '_pydev_bundle.pydev_imports' from 'E:\\PYCHARM\\PyCharm 2020.2.3\\plugins\\python\\helpers\\pydev\\_pydev_bundle\\py...
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+                 │              │              │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              │              └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+                 └ '#!/usr/bin/env python3\n# -*- coding:utf-8 -*-\n# Copyright (c) Megvii, Inc. and its affiliates.\n\nimport argparse\nimport ...
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 133, in <module>
+    args=(exp, args),
+          │    └ Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=1, dist_backend='nccl', dist_url=None, exp_fil...
+          └ ╒══════════════════╤═════════════════════════════════════════════════════════════════════════════════════════════════════════...
+
+> File "E:\clonegit项目\genshin_auto_fish\yolox\core\launch.py", line 98, in launch
+    main_func(*args)
+    │          └ (╒══════════════════╤════════════════════════════════════════════════════════════════════════════════════════════════════════...
+    └ <function main at 0x0000020CDA7094C8>
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 110, in main
+    trainer.train()
+    │       └ <function Trainer.train at 0x0000020CDD9CC3A8>
+    └ <yolox.core.trainer.Trainer object at 0x0000020CDA524308>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 73, in train
+    self.before_train()
+    │    └ <function Trainer.before_train at 0x0000020CE047F288>
+    └ <yolox.core.trainer.Trainer object at 0x0000020CDA524308>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 157, in before_train
+    self.prefetcher = DataPrefetcher(self.train_loader)
+    │                 │              │    └ <yolox.data.dataloading.DataLoader object at 0x0000020CE065B188>
+    │                 │              └ <yolox.core.trainer.Trainer object at 0x0000020CDA524308>
+    │                 └ <class 'yolox.data.data_prefetcher.DataPrefetcher'>
+    └ <yolox.core.trainer.Trainer object at 0x0000020CDA524308>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\data\data_prefetcher.py", line 18, in __init__
+    self.stream = torch.cuda.Stream()
+    │             │     │    └ <class 'torch.cuda.streams.Stream'>
+    │             │     └ <module 'torch.cuda' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\cuda\\__init__.py'>
+    │             └ <module 'torch' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\__init__.py'>
+    └ <yolox.data.data_prefetcher.DataPrefetcher object at 0x0000020CE37F5708>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\streams.py", line 32, in __new__
+    with torch.cuda.device(device):
+         │     │    │      └ None
+         │     │    └ <class 'torch.cuda.device'>
+         │     └ <module 'torch.cuda' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\cuda\\__init__.py'>
+         └ <module 'torch' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\__init__.py'>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\__init__.py", line 219, in __init__
+    self.idx = _get_device_index(device, optional=True)
+    │          │                 └ None
+    │          └ <function _get_device_index at 0x0000020CDCB89AF8>
+    └ <torch.cuda.device object at 0x0000020CE04C9C48>
+
+  File "E:\PYCHARM\lib\site-packages\torch\cuda\_utils.py", line 32, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           │                       │       │         └ False
+           │                       │       └ True
+           │                       └ None
+           └ <function _get_device_index at 0x0000020CDA7BF798>
+
+  File "E:\PYCHARM\lib\site-packages\torch\_utils.py", line 489, in _get_device_index
+    device_idx = _get_current_device_index()
+                 └ <function _get_current_device_index at 0x0000020CDA7BF5E8>
+
+  File "E:\PYCHARM\lib\site-packages\torch\_utils.py", line 448, in _get_current_device_index
+    return _get_device_attr(lambda m: m.current_device())
+           └ <function _get_device_attr at 0x0000020CDA7BF558>
+
+  File "E:\PYCHARM\lib\site-packages\torch\_utils.py", line 440, in _get_device_attr
+    if device_type.lower() == "cuda":
+       └ None
+
+AttributeError: 'NoneType' object has no attribute 'lower'
+2021-09-24 22:55:34.561 | INFO     | yolox.core.trainer:before_train:129 - args: Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=1, dist_backend='nccl', dist_url=None, exp_file='../yolox/exp/yolox_tiny_fish.py', experiment_name='yolox_tiny_fish', fp16=False, machine_rank=0, name=None, num_machines=1, occupy=False, opts=[], resume=False, start_epoch=None)
+2021-09-24 22:55:34.579 | INFO     | yolox.core.trainer:before_train:130 - exp value:
+╒══════════════════╤═══════════════════════╕
+│ keys             │ values                │
+╞══════════════════╪═══════════════════════╡
+│ seed             │ None                  │
+├──────────────────┼───────────────────────┤
+│ output_dir       │ './YOLOX_outputs'     │
+├──────────────────┼───────────────────────┤
+│ print_interval   │ 10                    │
+├──────────────────┼───────────────────────┤
+│ eval_interval    │ 10                    │
+├──────────────────┼───────────────────────┤
+│ num_classes      │ 6                     │
+├──────────────────┼───────────────────────┤
+│ depth            │ 0.33                  │
+├──────────────────┼───────────────────────┤
+│ width            │ 0.375                 │
+├──────────────────┼───────────────────────┤
+│ data_num_workers │ 4                     │
+├──────────────────┼───────────────────────┤
+│ input_size       │ (640, 640)            │
+├──────────────────┼───────────────────────┤
+│ multiscale_range │ 5                     │
+├──────────────────┼───────────────────────┤
+│ data_dir         │ '../imgs/'            │
+├──────────────────┼───────────────────────┤
+│ data_name        │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ val_name         │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ train_ann        │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ val_ann          │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ mosaic_prob      │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ mixup_prob       │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ hsv_prob         │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ flip_prob        │ 0.5                   │
+├──────────────────┼───────────────────────┤
+│ degrees          │ 10.0                  │
+├──────────────────┼───────────────────────┤
+│ translate        │ 0.1                   │
+├──────────────────┼───────────────────────┤
+│ mosaic_scale     │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ mixup_scale      │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ shear            │ 2.0                   │
+├──────────────────┼───────────────────────┤
+│ perspective      │ 0.0                   │
+├──────────────────┼───────────────────────┤
+│ enable_mixup     │ False                 │
+├──────────────────┼───────────────────────┤
+│ warmup_epochs    │ 5                     │
+├──────────────────┼───────────────────────┤
+│ max_epoch        │ 35                    │
+├──────────────────┼───────────────────────┤
+│ warmup_lr        │ 0                     │
+├──────────────────┼───────────────────────┤
+│ basic_lr_per_img │ 0.00025               │
+├──────────────────┼───────────────────────┤
+│ scheduler        │ 'yoloxwarmcos'        │
+├──────────────────┼───────────────────────┤
+│ no_aug_epochs    │ 15                    │
+├──────────────────┼───────────────────────┤
+│ min_lr_ratio     │ 0.05                  │
+├──────────────────┼───────────────────────┤
+│ ema              │ True                  │
+├──────────────────┼───────────────────────┤
+│ weight_decay     │ 0.0005                │
+├──────────────────┼───────────────────────┤
+│ momentum         │ 0.9                   │
+├──────────────────┼───────────────────────┤
+│ exp_name         │ 'yolox_tiny_fish'     │
+├──────────────────┼───────────────────────┤
+│ test_size        │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ test_conf        │ 0.01                  │
+├──────────────────┼───────────────────────┤
+│ nmsthre          │ 0.65                  │
+├──────────────────┼───────────────────────┤
+│ input_scale      │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ random_size      │ (10, 20)              │
+╘══════════════════╧═══════════════════════╛
+2021-09-24 22:55:35.098 | INFO     | yolox.core.trainer:before_train:138 - Model Summary: Params: 5.03M, Gflops: 6.40
+2021-09-24 22:55:35.123 | ERROR    | yolox.core.launch:launch:98 - An error has been caught in function 'launch', process 'MainProcess' (16632), thread 'MainThread' (16420):
+Traceback (most recent call last):
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2141, in <module>
+    main()
+    └ <function main at 0x00000282497DA558>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 2132, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+              │        │   │                          └ False
+              │        │   └ {'port': 5122, 'vm_type': None, 'client': '127.0.0.1', 'server': False, 'DEBUG_RECORD_SOCKET_READS': False, 'multiproc': True...
+              │        └ <function PyDB.run at 0x00000282497D7558>
+              └ <__main__.PyDB object at 0x0000028204C05A48>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1441, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+           │    │     │          │               │            │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+           │    │     │          │               │            └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+           │    │     │          │               └ None
+           │    │     │          └ ''
+           │    │     └ False
+           │    └ <function PyDB._exec at 0x00000282497D75E8>
+           └ <__main__.PyDB object at 0x0000028204C05A48>
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevd.py", line 1448, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+    │             │        │     │        └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+    │             │        └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+    │             └ <function execfile at 0x0000028247ADE8B8>
+    └ <module '_pydev_bundle.pydev_imports' from 'E:\\PYCHARM\\PyCharm 2020.2.3\\plugins\\python\\helpers\\pydev\\_pydev_bundle\\py...
+
+  File "E:\PYCHARM\PyCharm 2020.2.3\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+                 │              │              │     └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              │              └ {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader obj...
+                 │              └ 'E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py'
+                 └ '#!/usr/bin/env python3\n# -*- coding:utf-8 -*-\n# Copyright (c) Megvii, Inc. and its affiliates.\n\nimport argparse\nimport ...
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 133, in <module>
+    args=(exp, args),
+          │    └ Namespace(batch_size=8, cache=False, ckpt='../weights/yolox_tiny.pth', devices=1, dist_backend='nccl', dist_url=None, exp_fil...
+          └ ╒══════════════════╤═════════════════════════════════════════════════════════════════════════════════════════════════════════...
+
+> File "E:\clonegit项目\genshin_auto_fish\yolox\core\launch.py", line 98, in launch
+    main_func(*args)
+    │          └ (╒══════════════════╤════════════════════════════════════════════════════════════════════════════════════════════════════════...
+    └ <function main at 0x00000282498F84C8>
+
+  File "E:/clonegit项目/genshin_auto_fish/yolox_tools/train.py", line 110, in main
+    trainer.train()
+    │       └ <function Trainer.train at 0x000002824CBCD3A8>
+    └ <yolox.core.trainer.Trainer object at 0x000002824F6735C8>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 73, in train
+    self.before_train()
+    │    └ <function Trainer.before_train at 0x000002824F67E288>
+    └ <yolox.core.trainer.Trainer object at 0x000002824F6735C8>
+
+  File "E:\clonegit项目\genshin_auto_fish\yolox\core\trainer.py", line 140, in before_train
+    model.to(self.device)
+    │     │  │    └ 'cuda:-1'
+    │     │  └ <yolox.core.trainer.Trainer object at 0x000002824F6735C8>
+    │     └ <function Module.to at 0x000002824BEBB948>
+    └ YOLOX(
+        (backbone): YOLOPAFPN(
+          (backbone): CSPDarknet(
+            (stem): Focus(
+              (conv): BaseConv(
+                (conv): ...
+
+  File "E:\PYCHARM\lib\site-packages\torch\nn\modules\module.py", line 600, in to
+    device, dtype, non_blocking, convert_to_format = torch._C._nn._parse_to(*args, **kwargs)
+    │       │                                        │     │  │   │          │       └ {}
+    │       │                                        │     │  │   │          └ ('cuda:-1',)
+    │       │                                        │     │  │   └ <built-in function _parse_to>
+    │       │                                        │     │  └ <module 'torch._C._nn'>
+    │       │                                        │     └ <module 'torch._C' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\_C.cp37-win_amd64.pyd'>
+    │       │                                        └ <module 'torch' from 'E:\\PYCHARM\\lib\\site-packages\\torch\\__init__.py'>
+    │       └ <class 'torch.dtype'>
+    └ <class 'torch.device'>
+
+RuntimeError: Invalid device string: 'cuda:-1'

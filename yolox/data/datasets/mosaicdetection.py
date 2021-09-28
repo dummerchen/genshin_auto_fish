@@ -11,7 +11,11 @@ from yolox.utils import adjust_box_anns, get_local_rank
 
 from ..data_augment import box_candidates, random_perspective
 from .datasets_wrapper import Dataset
+import matplotlib as mpl
+from matplotlib import pyplot as plt
 
+mpl.rcParams['font.sans-serif'] = 'SimHei'
+mpl.rcParams['axes.unicode_minus'] = False
 
 def get_mosaic_coordinate(mosaic_image, mosaic_index, xc, yc, w, h, input_h, input_w):
     # TODO update doc
@@ -85,6 +89,7 @@ class MosaicDetection(Dataset):
             input_h, input_w = input_dim[0], input_dim[1]
 
             # yc, xc = s, s  # mosaic center x, y
+            # 画布大小为input_h,input_w
             yc = int(random.uniform(0.5 * input_h, 1.5 * input_h))
             xc = int(random.uniform(0.5 * input_w, 1.5 * input_w))
 
@@ -95,6 +100,7 @@ class MosaicDetection(Dataset):
                 img, _labels, _, img_id = self._dataset.pull_item(index)
                 h0, w0 = img.shape[:2]  # orig hw
                 scale = min(1. * input_h / h0, 1. * input_w / w0)
+                # img 放大到input size
                 img = cv2.resize(
                     img, (int(w0 * scale), int(h0 * scale)), interpolation=cv2.INTER_LINEAR
                 )
@@ -109,6 +115,8 @@ class MosaicDetection(Dataset):
                 )
 
                 mosaic_img[l_y1:l_y2, l_x1:l_x2] = img[s_y1:s_y2, s_x1:s_x2]
+                plt.imshow(mosaic_img)
+                plt.show()
                 padw, padh = l_x1 - s_x1, l_y1 - s_y1
 
                 labels = _labels.copy()

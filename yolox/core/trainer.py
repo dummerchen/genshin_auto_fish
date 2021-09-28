@@ -44,7 +44,10 @@ class Trainer:
         self.is_distributed = get_world_size() > 1
         self.rank = get_rank()
         self.local_rank = get_local_rank()
+        # 无gpu
+        # self.device=torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.device = "cuda:{}".format(self.local_rank)
+
         self.use_model_ema = exp.ema
 
         # data/dataloader related attr
@@ -127,7 +130,9 @@ class Trainer:
         logger.info("exp value:\n{}".format(self.exp))
 
         # model related init
-        torch.cuda.set_device(self.local_rank)
+        # cpu 跑不通
+        # torch.cuda.set_device(self.local_rank)
+        # torch.cuda.set_device(-1)
         model = self.exp.get_model()
         logger.info(
             "Model Summary: {}".format(get_model_info(model, self.exp.test_size))

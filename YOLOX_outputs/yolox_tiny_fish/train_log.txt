@@ -1,0 +1,486 @@
+2021-09-27 15:15:53.228 | INFO     | yolox.core.trainer:before_train:129 - args: Namespace(batch_size=8, cache=False, ckpt='weights/yolox_tiny.pth', devices=1, dist_backend='nccl', dist_url=None, exp_file='./yolox/exp/yolox_tiny_fish.py', experiment_name='yolox_tiny_fish', fp16=True, machine_rank=0, name=None, num_machines=1, occupy=True, opts=[], resume=False, start_epoch=None)
+2021-09-27 15:15:53.233 | INFO     | yolox.core.trainer:before_train:130 - exp value:
+╒══════════════════╤═══════════════════════╕
+│ keys             │ values                │
+╞══════════════════╪═══════════════════════╡
+│ seed             │ None                  │
+├──────────────────┼───────────────────────┤
+│ output_dir       │ './YOLOX_outputs'     │
+├──────────────────┼───────────────────────┤
+│ print_interval   │ 10                    │
+├──────────────────┼───────────────────────┤
+│ eval_interval    │ 10                    │
+├──────────────────┼───────────────────────┤
+│ num_classes      │ 6                     │
+├──────────────────┼───────────────────────┤
+│ depth            │ 0.33                  │
+├──────────────────┼───────────────────────┤
+│ width            │ 0.375                 │
+├──────────────────┼───────────────────────┤
+│ data_num_workers │ 4                     │
+├──────────────────┼───────────────────────┤
+│ input_size       │ (640, 640)            │
+├──────────────────┼───────────────────────┤
+│ multiscale_range │ 5                     │
+├──────────────────┼───────────────────────┤
+│ data_dir         │ '../imgs/'            │
+├──────────────────┼───────────────────────┤
+│ data_name        │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ val_name         │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ train_ann        │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ val_ann          │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ mosaic_prob      │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ mixup_prob       │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ hsv_prob         │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ flip_prob        │ 0.5                   │
+├──────────────────┼───────────────────────┤
+│ degrees          │ 10.0                  │
+├──────────────────┼───────────────────────┤
+│ translate        │ 0.1                   │
+├──────────────────┼───────────────────────┤
+│ mosaic_scale     │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ mixup_scale      │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ shear            │ 2.0                   │
+├──────────────────┼───────────────────────┤
+│ perspective      │ 0.0                   │
+├──────────────────┼───────────────────────┤
+│ enable_mixup     │ False                 │
+├──────────────────┼───────────────────────┤
+│ warmup_epochs    │ 5                     │
+├──────────────────┼───────────────────────┤
+│ max_epoch        │ 35                    │
+├──────────────────┼───────────────────────┤
+│ warmup_lr        │ 0                     │
+├──────────────────┼───────────────────────┤
+│ basic_lr_per_img │ 0.00025               │
+├──────────────────┼───────────────────────┤
+│ scheduler        │ 'yoloxwarmcos'        │
+├──────────────────┼───────────────────────┤
+│ no_aug_epochs    │ 15                    │
+├──────────────────┼───────────────────────┤
+│ min_lr_ratio     │ 0.05                  │
+├──────────────────┼───────────────────────┤
+│ ema              │ True                  │
+├──────────────────┼───────────────────────┤
+│ weight_decay     │ 0.0005                │
+├──────────────────┼───────────────────────┤
+│ momentum         │ 0.9                   │
+├──────────────────┼───────────────────────┤
+│ exp_name         │ 'yolox_tiny_fish'     │
+├──────────────────┼───────────────────────┤
+│ test_size        │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ test_conf        │ 0.01                  │
+├──────────────────┼───────────────────────┤
+│ nmsthre          │ 0.65                  │
+├──────────────────┼───────────────────────┤
+│ input_scale      │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ random_size      │ (10, 20)              │
+╘══════════════════╧═══════════════════════╛
+2021-09-27 15:15:53.735 | INFO     | yolox.core.trainer:before_train:138 - Model Summary: Params: 5.03M, Gflops: 6.40
+2021-09-27 15:15:53.741 | ERROR    | yolox.core.launch:launch:98 - An error has been caught in function 'launch', process 'MainProcess' (481), thread 'MainThread' (140466427361152):
+Traceback (most recent call last):
+
+  File "./yolox_tools/train.py", line 138, in <module>
+    args=(exp, args),
+          │    └ Namespace(batch_size=8, cache=False, ckpt='weights/yolox_tiny.pth', devices=1, dist_backend='nccl', dist_url=None, exp_file='...
+          └ ╒══════════════════╤═════════════════════════════════════════════════════════════════════════════════════════════════════════...
+
+> File "/content/drive/My Drive/colab/genshin_auto_fish/yolox/core/launch.py", line 98, in launch
+    main_func(*args)
+    │          └ (╒══════════════════╤════════════════════════════════════════════════════════════════════════════════════════════════════════...
+    └ <function main at 0x7fc0df323a70>
+
+  File "./yolox_tools/train.py", line 114, in main
+    trainer.train()
+    │       └ <function Trainer.train at 0x7fc06b93b8c0>
+    └ <yolox.core.trainer.Trainer object at 0x7fc0660f5910>
+
+  File "/content/drive/My Drive/colab/genshin_auto_fish/yolox/core/trainer.py", line 73, in train
+    self.before_train()
+    │    └ <function Trainer.before_train at 0x7fc066983680>
+    └ <yolox.core.trainer.Trainer object at 0x7fc0660f5910>
+
+  File "/content/drive/My Drive/colab/genshin_auto_fish/yolox/core/trainer.py", line 140, in before_train
+    model.to(self.device)
+    │     │  │    └ 'cuda:-1'
+    │     │  └ <yolox.core.trainer.Trainer object at 0x7fc0660f5910>
+    │     └ <function Module.to at 0x7fc078e179e0>
+    └ YOLOX(
+        (backbone): YOLOPAFPN(
+          (backbone): CSPDarknet(
+            (stem): Focus(
+              (conv): BaseConv(
+                (conv): ...
+
+  File "/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py", line 833, in to
+    device, dtype, non_blocking, convert_to_format = torch._C._nn._parse_to(*args, **kwargs)
+    │       │                                        │     │  │   │          │       └ {}
+    │       │                                        │     │  │   │          └ ('cuda:-1',)
+    │       │                                        │     │  │   └ <built-in function _parse_to>
+    │       │                                        │     │  └ <module 'torch._C._nn'>
+    │       │                                        │     └ <module 'torch._C' from '/usr/local/lib/python3.7/dist-packages/torch/_C.cpython-37m-x86_64-linux-gnu.so'>
+    │       │                                        └ <module 'torch' from '/usr/local/lib/python3.7/dist-packages/torch/__init__.py'>
+    │       └ <class 'torch.dtype'>
+    └ <class 'torch.device'>
+
+RuntimeError: Invalid device string: 'cuda:-1'
+2021-09-27 15:19:04.136 | INFO     | yolox.core.trainer:before_train:129 - args: Namespace(batch_size=8, cache=False, ckpt='weights/yolox_tiny.pth', devices=1, dist_backend='nccl', dist_url=None, exp_file='./yolox/exp/yolox_tiny_fish.py', experiment_name='yolox_tiny_fish', fp16=True, machine_rank=0, name=None, num_machines=1, occupy=True, opts=[], resume=False, start_epoch=None)
+2021-09-27 15:19:04.142 | INFO     | yolox.core.trainer:before_train:130 - exp value:
+╒══════════════════╤═══════════════════════╕
+│ keys             │ values                │
+╞══════════════════╪═══════════════════════╡
+│ seed             │ None                  │
+├──────────────────┼───────────────────────┤
+│ output_dir       │ './YOLOX_outputs'     │
+├──────────────────┼───────────────────────┤
+│ print_interval   │ 10                    │
+├──────────────────┼───────────────────────┤
+│ eval_interval    │ 10                    │
+├──────────────────┼───────────────────────┤
+│ num_classes      │ 6                     │
+├──────────────────┼───────────────────────┤
+│ depth            │ 0.33                  │
+├──────────────────┼───────────────────────┤
+│ width            │ 0.375                 │
+├──────────────────┼───────────────────────┤
+│ data_num_workers │ 4                     │
+├──────────────────┼───────────────────────┤
+│ input_size       │ (640, 640)            │
+├──────────────────┼───────────────────────┤
+│ multiscale_range │ 5                     │
+├──────────────────┼───────────────────────┤
+│ data_dir         │ '../imgs/'            │
+├──────────────────┼───────────────────────┤
+│ data_name        │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ val_name         │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ train_ann        │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ val_ann          │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ mosaic_prob      │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ mixup_prob       │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ hsv_prob         │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ flip_prob        │ 0.5                   │
+├──────────────────┼───────────────────────┤
+│ degrees          │ 10.0                  │
+├──────────────────┼───────────────────────┤
+│ translate        │ 0.1                   │
+├──────────────────┼───────────────────────┤
+│ mosaic_scale     │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ mixup_scale      │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ shear            │ 2.0                   │
+├──────────────────┼───────────────────────┤
+│ perspective      │ 0.0                   │
+├──────────────────┼───────────────────────┤
+│ enable_mixup     │ False                 │
+├──────────────────┼───────────────────────┤
+│ warmup_epochs    │ 5                     │
+├──────────────────┼───────────────────────┤
+│ max_epoch        │ 35                    │
+├──────────────────┼───────────────────────┤
+│ warmup_lr        │ 0                     │
+├──────────────────┼───────────────────────┤
+│ basic_lr_per_img │ 0.00025               │
+├──────────────────┼───────────────────────┤
+│ scheduler        │ 'yoloxwarmcos'        │
+├──────────────────┼───────────────────────┤
+│ no_aug_epochs    │ 15                    │
+├──────────────────┼───────────────────────┤
+│ min_lr_ratio     │ 0.05                  │
+├──────────────────┼───────────────────────┤
+│ ema              │ True                  │
+├──────────────────┼───────────────────────┤
+│ weight_decay     │ 0.0005                │
+├──────────────────┼───────────────────────┤
+│ momentum         │ 0.9                   │
+├──────────────────┼───────────────────────┤
+│ exp_name         │ 'yolox_tiny_fish'     │
+├──────────────────┼───────────────────────┤
+│ test_size        │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ test_conf        │ 0.01                  │
+├──────────────────┼───────────────────────┤
+│ nmsthre          │ 0.65                  │
+├──────────────────┼───────────────────────┤
+│ input_scale      │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ random_size      │ (10, 20)              │
+╘══════════════════╧═══════════════════════╛
+2021-09-27 15:19:04.311 | INFO     | yolox.core.trainer:before_train:138 - Model Summary: Params: 5.03M, Gflops: 6.40
+2021-09-27 15:19:04.326 | ERROR    | yolox.core.launch:launch:98 - An error has been caught in function 'launch', process 'MainProcess' (531), thread 'MainThread' (139940165355392):
+Traceback (most recent call last):
+
+  File "./yolox_tools/train.py", line 138, in <module>
+    args=(exp, args),
+          │    └ Namespace(batch_size=8, cache=False, ckpt='weights/yolox_tiny.pth', devices=1, dist_backend='nccl', dist_url=None, exp_file='...
+          └ ╒══════════════════╤═════════════════════════════════════════════════════════════════════════════════════════════════════════...
+
+> File "/content/drive/My Drive/colab/genshin_auto_fish/yolox/core/launch.py", line 98, in launch
+    main_func(*args)
+    │          └ (╒══════════════════╤════════════════════════════════════════════════════════════════════════════════════════════════════════...
+    └ <function main at 0x7f4657894a70>
+
+  File "./yolox_tools/train.py", line 114, in main
+    trainer.train()
+    │       └ <function Trainer.train at 0x7f45e3e6c8c0>
+    └ <yolox.core.trainer.Trainer object at 0x7f45de7a5990>
+
+  File "/content/drive/My Drive/colab/genshin_auto_fish/yolox/core/trainer.py", line 73, in train
+    self.before_train()
+    │    └ <function Trainer.before_train at 0x7f45deef4680>
+    └ <yolox.core.trainer.Trainer object at 0x7f45de7a5990>
+
+  File "/content/drive/My Drive/colab/genshin_auto_fish/yolox/core/trainer.py", line 140, in before_train
+    model.to(self.device)
+    │     │  │    └ 'cuda:0'
+    │     │  └ <yolox.core.trainer.Trainer object at 0x7f45de7a5990>
+    │     └ <function Module.to at 0x7f45f13889e0>
+    └ YOLOX(
+        (backbone): YOLOPAFPN(
+          (backbone): CSPDarknet(
+            (stem): Focus(
+              (conv): BaseConv(
+                (conv): ...
+
+  File "/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py", line 852, in to
+    return self._apply(convert)
+           │    │      └ <function Module.to.<locals>.convert at 0x7f45de45bf80>
+           │    └ <function Module._apply at 0x7f45f1388320>
+           └ YOLOX(
+               (backbone): YOLOPAFPN(
+                 (backbone): CSPDarknet(
+                   (stem): Focus(
+                     (conv): BaseConv(
+                       (conv): ...
+
+  File "/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py", line 530, in _apply
+    module._apply(fn)
+    │      │      └ <function Module.to.<locals>.convert at 0x7f45de45bf80>
+    │      └ <function Module._apply at 0x7f45f1388320>
+    └ YOLOPAFPN(
+        (backbone): CSPDarknet(
+          (stem): Focus(
+            (conv): BaseConv(
+              (conv): Conv2d(12, 24, kernel_size=(3...
+
+  File "/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py", line 530, in _apply
+    module._apply(fn)
+    │      │      └ <function Module.to.<locals>.convert at 0x7f45de45bf80>
+    │      └ <function Module._apply at 0x7f45f1388320>
+    └ CSPDarknet(
+        (stem): Focus(
+          (conv): BaseConv(
+            (conv): Conv2d(12, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1...
+
+  File "/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py", line 530, in _apply
+    module._apply(fn)
+    │      │      └ <function Module.to.<locals>.convert at 0x7f45de45bf80>
+    │      └ <function Module._apply at 0x7f45f1388320>
+    └ Focus(
+        (conv): BaseConv(
+          (conv): Conv2d(12, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn)...
+  [Previous line repeated 2 more times]
+
+  File "/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py", line 552, in _apply
+    param_applied = fn(param)
+                    │  └ Parameter containing:
+                    │    tensor([[[[ 0.0005,  0.0393, -0.0900],
+                    │              [-0.0012,  0.0010,  0.0563],
+                    │              [ 0.0944,  0.07...
+                    └ <function Module.to.<locals>.convert at 0x7f45de45bf80>
+
+  File "/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py", line 850, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+           │ │  │       │        │ │                      │ │                       └ False
+           │ │  │       │        │ │                      │ └ <method 'is_complex' of 'torch._C._TensorBase' objects>
+           │ │  │       │        │ │                      └ Parameter containing:
+           │ │  │       │        │ │                        tensor([[[[ 0.0005,  0.0393, -0.0900],
+           │ │  │       │        │ │                                  [-0.0012,  0.0010,  0.0563],
+           │ │  │       │        │ │                                  [ 0.0944,  0.07...
+           │ │  │       │        │ └ <method 'is_floating_point' of 'torch._C._TensorBase' objects>
+           │ │  │       │        └ Parameter containing:
+           │ │  │       │          tensor([[[[ 0.0005,  0.0393, -0.0900],
+           │ │  │       │                    [-0.0012,  0.0010,  0.0563],
+           │ │  │       │                    [ 0.0944,  0.07...
+           │ │  │       └ None
+           │ │  └ device(type='cuda', index=0)
+           │ └ <method 'to' of 'torch._C._TensorBase' objects>
+           └ Parameter containing:
+             tensor([[[[ 0.0005,  0.0393, -0.0900],
+                       [-0.0012,  0.0010,  0.0563],
+                       [ 0.0944,  0.07...
+
+  File "/usr/local/lib/python3.7/dist-packages/torch/cuda/__init__.py", line 172, in _lazy_init
+    torch._C._cuda_init()
+    │     │  └ <built-in function _cuda_init>
+    │     └ <module 'torch._C' from '/usr/local/lib/python3.7/dist-packages/torch/_C.cpython-37m-x86_64-linux-gnu.so'>
+    └ <module 'torch' from '/usr/local/lib/python3.7/dist-packages/torch/__init__.py'>
+
+RuntimeError: No CUDA GPUs are available
+2021-09-27 15:21:52.512 | INFO     | yolox.core.trainer:before_train:129 - args: Namespace(batch_size=8, cache=False, ckpt='weights/yolox_tiny.pth', devices=1, dist_backend='nccl', dist_url=None, exp_file='./yolox/exp/yolox_tiny_fish.py', experiment_name='yolox_tiny_fish', fp16=True, machine_rank=0, name=None, num_machines=1, occupy=True, opts=[], resume=False, start_epoch=None)
+2021-09-27 15:21:52.742 | INFO     | yolox.core.trainer:before_train:130 - exp value:
+╒══════════════════╤═══════════════════════╕
+│ keys             │ values                │
+╞══════════════════╪═══════════════════════╡
+│ seed             │ None                  │
+├──────────────────┼───────────────────────┤
+│ output_dir       │ './YOLOX_outputs'     │
+├──────────────────┼───────────────────────┤
+│ print_interval   │ 10                    │
+├──────────────────┼───────────────────────┤
+│ eval_interval    │ 10                    │
+├──────────────────┼───────────────────────┤
+│ num_classes      │ 6                     │
+├──────────────────┼───────────────────────┤
+│ depth            │ 0.33                  │
+├──────────────────┼───────────────────────┤
+│ width            │ 0.375                 │
+├──────────────────┼───────────────────────┤
+│ data_num_workers │ 4                     │
+├──────────────────┼───────────────────────┤
+│ input_size       │ (640, 640)            │
+├──────────────────┼───────────────────────┤
+│ multiscale_range │ 5                     │
+├──────────────────┼───────────────────────┤
+│ data_dir         │ '../imgs/'            │
+├──────────────────┼───────────────────────┤
+│ data_name        │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ val_name         │ 'images'              │
+├──────────────────┼───────────────────────┤
+│ train_ann        │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ val_ann          │ 'fish_p2_75+jam.json' │
+├──────────────────┼───────────────────────┤
+│ mosaic_prob      │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ mixup_prob       │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ hsv_prob         │ 1.0                   │
+├──────────────────┼───────────────────────┤
+│ flip_prob        │ 0.5                   │
+├──────────────────┼───────────────────────┤
+│ degrees          │ 10.0                  │
+├──────────────────┼───────────────────────┤
+│ translate        │ 0.1                   │
+├──────────────────┼───────────────────────┤
+│ mosaic_scale     │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ mixup_scale      │ (0.5, 1.5)            │
+├──────────────────┼───────────────────────┤
+│ shear            │ 2.0                   │
+├──────────────────┼───────────────────────┤
+│ perspective      │ 0.0                   │
+├──────────────────┼───────────────────────┤
+│ enable_mixup     │ False                 │
+├──────────────────┼───────────────────────┤
+│ warmup_epochs    │ 5                     │
+├──────────────────┼───────────────────────┤
+│ max_epoch        │ 35                    │
+├──────────────────┼───────────────────────┤
+│ warmup_lr        │ 0                     │
+├──────────────────┼───────────────────────┤
+│ basic_lr_per_img │ 0.00025               │
+├──────────────────┼───────────────────────┤
+│ scheduler        │ 'yoloxwarmcos'        │
+├──────────────────┼───────────────────────┤
+│ no_aug_epochs    │ 15                    │
+├──────────────────┼───────────────────────┤
+│ min_lr_ratio     │ 0.05                  │
+├──────────────────┼───────────────────────┤
+│ ema              │ True                  │
+├──────────────────┼───────────────────────┤
+│ weight_decay     │ 0.0005                │
+├──────────────────┼───────────────────────┤
+│ momentum         │ 0.9                   │
+├──────────────────┼───────────────────────┤
+│ exp_name         │ 'yolox_tiny_fish'     │
+├──────────────────┼───────────────────────┤
+│ test_size        │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ test_conf        │ 0.01                  │
+├──────────────────┼───────────────────────┤
+│ nmsthre          │ 0.65                  │
+├──────────────────┼───────────────────────┤
+│ input_scale      │ (416, 416)            │
+├──────────────────┼───────────────────────┤
+│ random_size      │ (10, 20)              │
+╘══════════════════╧═══════════════════════╛
+2021-09-27 15:21:53.332 | INFO     | yolox.core.trainer:before_train:138 - Model Summary: Params: 5.03M, Gflops: 6.40
+2021-09-27 15:22:02.295 | INFO     | yolox.core.trainer:resume_train:291 - loading checkpoint for fine tuning
+2021-09-27 15:22:04.283 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.0.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-27 15:22:04.284 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.0.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.0.bias in model is torch.Size([6]).
+2021-09-27 15:22:04.285 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.1.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-27 15:22:04.286 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.1.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.1.bias in model is torch.Size([6]).
+2021-09-27 15:22:04.286 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.weight in checkpoint is torch.Size([80, 96, 1, 1]), while shape of head.cls_preds.2.weight in model is torch.Size([6, 96, 1, 1]).
+2021-09-27 15:22:04.287 | WARNING  | yolox.utils.checkpoint:load_ckpt:26 - Shape of head.cls_preds.2.bias in checkpoint is torch.Size([80]), while shape of head.cls_preds.2.bias in model is torch.Size([6]).
+2021-09-27 15:22:04.329 | INFO     | yolox.data.datasets.coco:__init__:45 - loading annotations into memory...
+2021-09-27 15:22:04.330 | ERROR    | yolox.core.launch:launch:98 - An error has been caught in function 'launch', process 'MainProcess' (303), thread 'MainThread' (139978049623936):
+Traceback (most recent call last):
+
+  File "./yolox_tools/train.py", line 138, in <module>
+    args=(exp, args),
+          │    └ Namespace(batch_size=8, cache=False, ckpt='weights/yolox_tiny.pth', devices=1, dist_backend='nccl', dist_url=None, exp_file='...
+          └ ╒══════════════════╤═════════════════════════════════════════════════════════════════════════════════════════════════════════...
+
+> File "/content/drive/MyDrive/colab/genshin_auto_fish/yolox/core/launch.py", line 98, in launch
+    main_func(*args)
+    │          └ (╒══════════════════╤════════════════════════════════════════════════════════════════════════════════════════════════════════...
+    └ <function main at 0x7f4f299d5a70>
+
+  File "./yolox_tools/train.py", line 114, in main
+    trainer.train()
+    │       └ <function Trainer.train at 0x7f4ebf21cd40>
+    └ <yolox.core.trainer.Trainer object at 0x7f4eb08e6a10>
+
+  File "/content/drive/MyDrive/colab/genshin_auto_fish/yolox/core/trainer.py", line 73, in train
+    self.before_train()
+    │    └ <function Trainer.before_train at 0x7f4eb102f7a0>
+    └ <yolox.core.trainer.Trainer object at 0x7f4eb08e6a10>
+
+  File "/content/drive/MyDrive/colab/genshin_auto_fish/yolox/core/trainer.py", line 154, in before_train
+    cache_img=self.args.cache,
+              │    │    └ False
+              │    └ Namespace(batch_size=8, cache=False, ckpt='weights/yolox_tiny.pth', devices=1, dist_backend='nccl', dist_url=None, exp_file='...
+              └ <yolox.core.trainer.Trainer object at 0x7f4eb08e6a10>
+
+  File "/content/drive/MyDrive/colab/genshin_auto_fish/yolox/exp/yolox_base.py", line 122, in get_data_loader
+    cache=cache_img,
+          └ False
+
+  File "/content/drive/MyDrive/colab/genshin_auto_fish/yolox/data/datasets/coco.py", line 45, in __init__
+    self.coco = COCO(os.path.join(self.data_dir, "annotations", self.json_file))
+    │           │    │  │    │    │    │                        │    └ 'fish_p2_75+jam.json'
+    │           │    │  │    │    │    │                        └ <yolox.data.datasets.coco.COCODataset object at 0x7f4eb0b936d0>
+    │           │    │  │    │    │    └ '../imgs/'
+    │           │    │  │    │    └ <yolox.data.datasets.coco.COCODataset object at 0x7f4eb0b936d0>
+    │           │    │  │    └ <function join at 0x7f4f2bcab7a0>
+    │           │    │  └ <module 'posixpath' from '/usr/lib/python3.7/posixpath.py'>
+    │           │    └ <module 'os' from '/usr/lib/python3.7/os.py'>
+    │           └ <class 'pycocotools.coco.COCO'>
+    └ <yolox.data.datasets.coco.COCODataset object at 0x7f4eb0b936d0>
+
+  File "/usr/local/lib/python3.7/dist-packages/pycocotools/coco.py", line 84, in __init__
+    with open(annotation_file, 'r') as f:
+              └ '../imgs/annotations/fish_p2_75+jam.json'
+
+FileNotFoundError: [Errno 2] No such file or directory: '../imgs/annotations/fish_p2_75+jam.json'
